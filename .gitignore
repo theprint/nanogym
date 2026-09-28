@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.python/
+.uv-cache/
+
+# Your own training runs stay local; only the bundled sample runs are tracked.
+runs/*/
+!runs/.gitkeep
+!runs/prompter-v0.4-Nano/
+!runs/occultisms-v2.4/
+
+# Browser exports written by the dashboard or scripts/export.py.
+exports/

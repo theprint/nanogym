@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NanoGym model test</title>
+  <!-- A deliberately plain test page for an exported NanoGym model. Restyle or rebuild it freely. -->
+  <style>
+    body { max-width: 720px; margin: 40px auto; padding: 0 16px; font-family: system-ui, sans-serif; line-height: 1.5; }
+    #output { min-height: 6em; padding: 12px; border: 1px solid #ccc; border-radius: 6px; white-space: pre-wrap; font-family: ui-monospace, monospace; }
+    #info { color: #666; font-size: 13px; }
+    #details { margin-top: 32px; font-size: 14px; }
+    #details th { text-align: left; vertical-align: top; padding: 4px 16px 4px 0; white-space: nowrap; }
+    #details td { padding: 4px 0; }
+  </style>
+</head>
+<body>
+  <h1 id="title">Model test</h1>
+  <p id="info">Loading model…</p>
+  <button id="generate" type="button" disabled>Generate</button>
+  <div id="output" aria-live="polite"></div>
+
+  <section id="details" hidden>
+    <h2>About this model</h2>
+    <table><tbody id="details-rows"></tbody></table>
+    <p>Full details: <a href="training.json">training.json</a></p>
+  </section>
+
+  <script type="module">
+    import { BrowserGPT, CharTokenizer } from "./model.js";
+
+    // Settings you may want to change.
+    const TEMPERATURE = 0.8;   // lower = safer and more repetitive, higher = more varied
+    const MAX_NEW_CHARS = 1000; // also capped by the model's context length
+
+    const $ = (id) => document.getElementById(id);
+    let model, tokenizer;
+
+    async function load() {
+      const get = async (file) => {
+        const response = await fetch(`./${file}`);
+        if (!response.ok) throw new Error(`could not load ${file} (${response.status})`);
+        return response;
+      };
+      const [metadata, vocab, weights] = await Promise.all([
+        get("model.json").then((r) => r.json()),
+        get("vocab.json").then((r) => r.json()),
+        get("weights.bin").then((r) => r.arrayBuffer()),
+      ]);
+      tokenizer = new CharTokenizer(vocab);
+      model = new BrowserGPT(metadata, weights);
+      $("title").textContent = metadata.source_run;
+      $("info").textContent = `${(metadata.parameter_count / 1e6).toFixed(2)}M parameters · ${metadata.block_size}-character context · runs entirely in your browser`;
+      $("generate").disabled = false;
+      // training.json is optional: the page still works if it has been removed.
+      fetch("./training.json").then((r) => (r.ok ? r.json() : null)).then((t) => t && showDetails(t)).catch(() => {});
+    }
+
+    function showDetails(t) {
+      const n = (value) => (value == null ? "?" : Number(value).toLocaleString());
+      const short = (value) => (value == null ? "?" : value >= 1e6 ? `${(value / 1e6).toFixed(1)}M` : n(value));
+      const { dataset: d, model: m, training: tr, checkpoint: c } = t;
+      const rows = [
+        ["Dataset", `${d.file} · ${short(d.characters)} characters (${Math.round(d.val_fraction * 100)}% held out for validation) · ${d.vocabulary_size}-symbol vocabulary`],
+        ["Architecture", `${m.preset} preset · ${m.n_layer} layers · ${m.n_embd} width · ${m.n_head} attention heads · ${m.context_chars}-character context · ${n(m.parameters)} parameters`],
+        ["Training", `${n(tr.max_steps)} steps × batch ${tr.batch_size} · ${tr.optimizer}, learning rate ${tr.learning_rate} → ${tr.min_learning_rate} (${tr.lr_schedule}, ${tr.warmup_steps} warmup steps) · dropout ${m.dropout} · weight decay ${tr.weight_decay} · gradient clip ${tr.grad_clip} · seed ${tr.seed} · ${tr.device}`],
+        ["Checkpoint", `best validation loss ${c.best_val_loss?.toFixed(3)} (${c.best_val_bits_per_char?.toFixed(3)} bits per character) at step ${n(c.step)} · ${short(c.tokens_seen)} characters seen · ${Math.round((c.training_seconds || 0) / 60)} min of training`],
+        ["Exported", new Date(t.exported_at).toLocaleString()],
+      ];
+      for (const [label, value] of rows) {
+        const row = document.createElement("tr");
+        row.innerHTML = "<th></th><td></td>";
+        row.children[0].textContent = label;
+        row.children[1].textContent = value;
+        $("details-rows").appendChild(row);
+      }
+      $("details").hidden = false;
+    }
+
+    async function generate() {
+      $("generate").disabled = true;
+      $("output").textContent = "Generating…";
+      try {
+        // Start a fresh entry the way the training data does: the special BOS token plus the
+        // literal "<bos>" marker. Stop at the literal "<eos>" marker (or the special EOS token).
+        const ids = await model.generate({
+          inputIds: [tokenizer.bosId, ...tokenizer.encode("<bos>")],
+          bosId: tokenizer.bosId,
+          eosId: tokenizer.eosId,
+          stopSequenceIds: tokenizer.encode("<eos>"),
+          maxNewTokens: MAX_NEW_CHARS,
+          temperature: TEMPERATURE,
+        });
+        // Skip any empty entries a less-trained model opens before writing (e.g. "\n<bos>").
+        const text = tokenizer.decode(ids).replace(/^(\s*<bos>)+/, "");
+        const end = text.indexOf("<eos>");
+        $("output").textContent = (end >= 0 ? text.slice(0, end) : text).trim() || "(the model ended the entry right away; try again)";
+      } catch (error) {
+        console.error(error);
+        $("output").textContent = `Generation failed: ${error.message}`;
+      } finally {
+        $("generate").disabled = false;
+      }
+    }
+
+    $("generate").addEventListener("click", generate);
+    load().catch((error) => {
+      console.error(error);
+      $("info").textContent = location.protocol === "file:"
+        ? "Browsers block loading model files from file:// pages. Serve this folder with a local web server instead (see README.md)."
+        : `Could not load the model: ${error.message}`;
+    });
+  </script>
+</body>
+</html>

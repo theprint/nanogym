@@ -1,0 +1,10 @@
+# NOTE: plain `pip install torch` pulls the CPU-only wheel on Windows, which
+# disables the dashboard's CUDA/GPU option. For an NVIDIA GPU (e.g. RTX 50-series
+# needs cu128+), install the CUDA build into the venv instead:
+#   .venv\Scripts\python -m pip install --force-reinstall --index-url https://download.pytorch.org/whl/cu128 torch
+torch>=2.1
+numpy>=1.24
+pyyaml>=6.0
+fastapi>=0.110
+uvicorn[standard]>=0.27
+

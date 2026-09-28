@@ -1,0 +1,842 @@
+[nanogym] training occultisms-v2.4 on cuda for 60000 steps
+[nanogym] step      1/60000  loss 4.8689  bpc 7.024  lr 2.10e-06  tok/s 20154
+[nanogym] step    100/60000  loss 2.4154  bpc 3.485  lr 2.10e-04  tok/s 424322
+[nanogym] step    200/60000  loss 2.1994  bpc 3.173  lr 4.21e-04  tok/s 553416
+[nanogym] eval     250/60000  train 1.9752  val 1.9664  gap -0.0088
+[nanogym] step    300/60000  loss 1.9444  bpc 2.805  lr 4.21e-04  tok/s 494444
+[nanogym] step    400/60000  loss 1.6690  bpc 2.408  lr 4.21e-04  tok/s 553345
+[nanogym] step    500/60000  loss 1.4658  bpc 2.115  lr 4.21e-04  tok/s 362911
+[nanogym] eval     500/60000  train 1.3933  val 1.4181  gap +0.0248
+[nanogym] step    600/60000  loss 1.3556  bpc 1.956  lr 4.21e-04  tok/s 521239
+[nanogym] step    700/60000  loss 1.2026  bpc 1.735  lr 4.21e-04  tok/s 425379
+[nanogym] eval     750/60000  train 1.1132  val 1.1649  gap +0.0517
+[nanogym] step    800/60000  loss 1.1523  bpc 1.662  lr 4.21e-04  tok/s 560497
+[nanogym] step    900/60000  loss 1.1448  bpc 1.652  lr 4.21e-04  tok/s 510752
+[nanogym] step   1000/60000  loss 1.0688  bpc 1.542  lr 4.21e-04  tok/s 516634
+[nanogym] eval    1000/60000  train 0.9903  val 1.0617  gap +0.0714
+[nanogym] step   1100/60000  loss 1.0423  bpc 1.504  lr 4.21e-04  tok/s 542664
+[nanogym] step   1200/60000  loss 1.0145  bpc 1.464  lr 4.21e-04  tok/s 493571
+[nanogym] eval    1250/60000  train 0.9279  val 1.0026  gap +0.0747
+[nanogym] step   1300/60000  loss 0.9450  bpc 1.363  lr 4.21e-04  tok/s 501844
+[nanogym] step   1400/60000  loss 0.9372  bpc 1.352  lr 4.21e-04  tok/s 569652
+[nanogym] step   1500/60000  loss 0.9447  bpc 1.363  lr 4.21e-04  tok/s 537896
+[nanogym] eval    1500/60000  train 0.8606  val 0.9501  gap +0.0895
+[nanogym] step   1600/60000  loss 0.9030  bpc 1.303  lr 4.20e-04  tok/s 566223
+[nanogym] step   1700/60000  loss 0.8557  bpc 1.234  lr 4.20e-04  tok/s 528128
+[nanogym] eval    1750/60000  train 0.8279  val 0.9196  gap +0.0917
+[nanogym] step   1800/60000  loss 0.8559  bpc 1.235  lr 4.20e-04  tok/s 480884
+[nanogym] step   1900/60000  loss 0.8421  bpc 1.215  lr 4.20e-04  tok/s 489753
+[nanogym] step   2000/60000  loss 0.8119  bpc 1.171  lr 4.20e-04  tok/s 517659
+[nanogym] eval    2000/60000  train 0.8086  val 0.8929  gap +0.0842
+[nanogym] step   2100/60000  loss 0.8263  bpc 1.192  lr 4.20e-04  tok/s 503791
+[nanogym] step   2200/60000  loss 0.8360  bpc 1.206  lr 4.20e-04  tok/s 533935
+[nanogym] eval    2250/60000  train 0.7850  val 0.8769  gap +0.0919
+[nanogym] step   2300/60000  loss 0.8054  bpc 1.162  lr 4.20e-04  tok/s 445242
+[nanogym] step   2400/60000  loss 0.8077  bpc 1.165  lr 4.20e-04  tok/s 547942
+[nanogym] step   2500/60000  loss 0.8015  bpc 1.156  lr 4.20e-04  tok/s 565394
+[nanogym] eval    2500/60000  train 0.7495  val 0.8530  gap +0.1035
+[nanogym] step   2600/60000  loss 0.7953  bpc 1.147  lr 4.19e-04  tok/s 567659
+[nanogym] step   2700/60000  loss 0.7441  bpc 1.074  lr 4.19e-04  tok/s 466239
+[nanogym] eval    2750/60000  train 0.7252  val 0.8522  gap +0.1270
+[nanogym] step   2800/60000  loss 0.7742  bpc 1.117  lr 4.19e-04  tok/s 582095
+[nanogym] step   2900/60000  loss 0.7730  bpc 1.115  lr 4.19e-04  tok/s 512699
+[nanogym] step   3000/60000  loss 0.7444  bpc 1.074  lr 4.19e-04  tok/s 585373
+[nanogym] eval    3000/60000  train 0.7115  val 0.8372  gap +0.1257
+[nanogym] step   3100/60000  loss 0.7781  bpc 1.123  lr 4.19e-04  tok/s 410849
+[nanogym] step   3200/60000  loss 0.7484  bpc 1.080  lr 4.19e-04  tok/s 479398
+[nanogym] eval    3250/60000  train 0.6944  val 0.8235  gap +0.1292
+[nanogym] step   3300/60000  loss 0.7400  bpc 1.068  lr 4.18e-04  tok/s 338603
+[nanogym] step   3400/60000  loss 0.7091  bpc 1.023  lr 4.18e-04  tok/s 422181
+[nanogym] step   3500/60000  loss 0.7429  bpc 1.072  lr 4.18e-04  tok/s 585126
+[nanogym] eval    3500/60000  train 0.6804  val 0.8040  gap +0.1236
+[nanogym] step   3600/60000  loss 0.7112  bpc 1.026  lr 4.18e-04  tok/s 455934
+[nanogym] step   3700/60000  loss 0.7549  bpc 1.089  lr 4.18e-04  tok/s 542244
+[nanogym] eval    3750/60000  train 0.6604  val 0.7981  gap +0.1377
+[nanogym] step   3800/60000  loss 0.6987  bpc 1.008  lr 4.18e-04  tok/s 207245
+[nanogym] step   3900/60000  loss 0.6790  bpc 0.980  lr 4.17e-04  tok/s 219313
+[nanogym] step   4000/60000  loss 0.7098  bpc 1.024  lr 4.17e-04  tok/s 178525
+[nanogym] eval    4000/60000  train 0.6651  val 0.8044  gap +0.1393
+[nanogym] step   4100/60000  loss 0.7402  bpc 1.068  lr 4.17e-04  tok/s 202690
+[nanogym] step   4200/60000  loss 0.7190  bpc 1.037  lr 4.17e-04  tok/s 214698
+[nanogym] eval    4250/60000  train 0.6458  val 0.7865  gap +0.1407
+[nanogym] step   4300/60000  loss 0.6722  bpc 0.970  lr 4.17e-04  tok/s 132425
+[nanogym] step   4400/60000  loss 0.6892  bpc 0.994  lr 4.16e-04  tok/s 224382
+[nanogym] step   4500/60000  loss 0.6789  bpc 0.979  lr 4.16e-04  tok/s 200816
+[nanogym] eval    4500/60000  train 0.6408  val 0.7812  gap +0.1405
+[nanogym] step   4600/60000  loss 0.6544  bpc 0.944  lr 4.16e-04  tok/s 195015
+[nanogym] step   4700/60000  loss 0.6723  bpc 0.970  lr 4.16e-04  tok/s 189637
+[nanogym] eval    4750/60000  train 0.6353  val 0.7846  gap +0.1493
+[nanogym] step   4800/60000  loss 0.6858  bpc 0.989  lr 4.15e-04  tok/s 189320
+[nanogym] step   4900/60000  loss 0.6329  bpc 0.913  lr 4.15e-04  tok/s 212421
+[nanogym] step   5000/60000  loss 0.6413  bpc 0.925  lr 4.15e-04  tok/s 225862
+[nanogym] eval    5000/60000  train 0.6175  val 0.7716  gap +0.1541
+[nanogym] step   5100/60000  loss 0.6284  bpc 0.907  lr 4.15e-04  tok/s 226881
+[nanogym] step   5200/60000  loss 0.6795  bpc 0.980  lr 4.15e-04  tok/s 218920
+[nanogym] eval    5250/60000  train 0.6103  val 0.7770  gap +0.1667
+[nanogym] step   5300/60000  loss 0.6333  bpc 0.914  lr 4.14e-04  tok/s 182395
+[nanogym] step   5400/60000  loss 0.6177  bpc 0.891  lr 4.14e-04  tok/s 224624
+[nanogym] step   5500/60000  loss 0.6333  bpc 0.914  lr 4.14e-04  tok/s 222967
+[nanogym] eval    5500/60000  train 0.6057  val 0.7657  gap +0.1599
+[nanogym] step   5600/60000  loss 0.6517  bpc 0.940  lr 4.13e-04  tok/s 231942
+[nanogym] step   5700/60000  loss 0.6156  bpc 0.888  lr 4.13e-04  tok/s 231393
+[nanogym] eval    5750/60000  train 0.5941  val 0.7563  gap +0.1622
+[nanogym] step   5800/60000  loss 0.6149  bpc 0.887  lr 4.13e-04  tok/s 189428
+[nanogym] step   5900/60000  loss 0.6252  bpc 0.902  lr 4.13e-04  tok/s 226052
+[nanogym] step   6000/60000  loss 0.6714  bpc 0.969  lr 4.12e-04  tok/s 200697
+[nanogym] eval    6000/60000  train 0.5930  val 0.7664  gap +0.1734
+[nanogym] step   6100/60000  loss 0.6655  bpc 0.960  lr 4.12e-04  tok/s 214874
+[nanogym] step   6200/60000  loss 0.6580  bpc 0.949  lr 4.12e-04  tok/s 201192
+[nanogym] eval    6250/60000  train 0.5778  val 0.7427  gap +0.1648
+[nanogym] step   6300/60000  loss 0.6464  bpc 0.933  lr 4.11e-04  tok/s 195010
+[nanogym] step   6400/60000  loss 0.6112  bpc 0.882  lr 4.11e-04  tok/s 228553
+[nanogym] step   6500/60000  loss 0.6320  bpc 0.912  lr 4.11e-04  tok/s 204584
+[nanogym] eval    6500/60000  train 0.5794  val 0.7574  gap +0.1780
+[nanogym] step   6600/60000  loss 0.6358  bpc 0.917  lr 4.10e-04  tok/s 215854
+[nanogym] step   6700/60000  loss 0.6584  bpc 0.950  lr 4.10e-04  tok/s 245842
+[nanogym] eval    6750/60000  train 0.5746  val 0.7567  gap +0.1821
+[nanogym] step   6800/60000  loss 0.6299  bpc 0.909  lr 4.10e-04  tok/s 212465
+[nanogym] step   6900/60000  loss 0.6116  bpc 0.882  lr 4.09e-04  tok/s 175100
+[nanogym] step   7000/60000  loss 0.5636  bpc 0.813  lr 4.09e-04  tok/s 221490
+[nanogym] eval    7000/60000  train 0.5611  val 0.7514  gap +0.1903
+[nanogym] step   7100/60000  loss 0.5759  bpc 0.831  lr 4.09e-04  tok/s 226574
+[nanogym] step   7200/60000  loss 0.6086  bpc 0.878  lr 4.08e-04  tok/s 163133
+[nanogym] eval    7250/60000  train 0.5511  val 0.7508  gap +0.1997
+[nanogym] step   7300/60000  loss 0.6021  bpc 0.869  lr 4.08e-04  tok/s 217256
+[nanogym] step   7400/60000  loss 0.5885  bpc 0.849  lr 4.08e-04  tok/s 211734
+[nanogym] step   7500/60000  loss 0.6258  bpc 0.903  lr 4.07e-04  tok/s 228932
+[nanogym] eval    7500/60000  train 0.5509  val 0.7488  gap +0.1978
+[nanogym] step   7600/60000  loss 0.6078  bpc 0.877  lr 4.07e-04  tok/s 213523
+[nanogym] step   7700/60000  loss 0.5523  bpc 0.797  lr 4.06e-04  tok/s 222412
+[nanogym] eval    7750/60000  train 0.5358  val 0.7400  gap +0.2042
+[nanogym] step   7800/60000  loss 0.6358  bpc 0.917  lr 4.06e-04  tok/s 230733
+[nanogym] step   7900/60000  loss 0.6052  bpc 0.873  lr 4.06e-04  tok/s 219979
+[nanogym] step   8000/60000  loss 0.5922  bpc 0.854  lr 4.05e-04  tok/s 209393
+[nanogym] eval    8000/60000  train 0.5341  val 0.7491  gap +0.2150
+[nanogym] step   8100/60000  loss 0.6020  bpc 0.869  lr 4.05e-04  tok/s 225376
+[nanogym] step   8200/60000  loss 0.5554  bpc 0.801  lr 4.05e-04  tok/s 206151
+[nanogym] eval    8250/60000  train 0.5385  val 0.7387  gap +0.2001
+[nanogym] step   8300/60000  loss 0.6040  bpc 0.871  lr 4.04e-04  tok/s 201829
+[nanogym] step   8400/60000  loss 0.5605  bpc 0.809  lr 4.04e-04  tok/s 206130
+[nanogym] step   8500/60000  loss 0.5740  bpc 0.828  lr 4.03e-04  tok/s 198209
+[nanogym] eval    8500/60000  train 0.5357  val 0.7423  gap +0.2066
+[nanogym] step   8600/60000  loss 0.6178  bpc 0.891  lr 4.03e-04  tok/s 210173
+[nanogym] step   8700/60000  loss 0.5849  bpc 0.844  lr 4.02e-04  tok/s 226348
+[nanogym] eval    8750/60000  train 0.5282  val 0.7414  gap +0.2132
+[nanogym] step   8800/60000  loss 0.6081  bpc 0.877  lr 4.02e-04  tok/s 178990
+[nanogym] step   8900/60000  loss 0.5470  bpc 0.789  lr 4.02e-04  tok/s 221117
+[nanogym] step   9000/60000  loss 0.6034  bpc 0.871  lr 4.01e-04  tok/s 194657
+[nanogym] eval    9000/60000  train 0.5113  val 0.7421  gap +0.2308
+[nanogym] step   9100/60000  loss 0.5544  bpc 0.800  lr 4.01e-04  tok/s 200158
+[nanogym] step   9200/60000  loss 0.5977  bpc 0.862  lr 4.00e-04  tok/s 209242
+[nanogym] eval    9250/60000  train 0.5140  val 0.7463  gap +0.2323
+[nanogym] step   9300/60000  loss 0.5429  bpc 0.783  lr 4.00e-04  tok/s 146331
+[nanogym] step   9400/60000  loss 0.5849  bpc 0.844  lr 3.99e-04  tok/s 211004
+[nanogym] step   9500/60000  loss 0.5612  bpc 0.810  lr 3.99e-04  tok/s 104459
+[nanogym] eval    9500/60000  train 0.5104  val 0.7515  gap +0.2412
+[nanogym] step   9600/60000  loss 0.5579  bpc 0.805  lr 3.98e-04  tok/s 222403
+[nanogym] step   9700/60000  loss 0.5537  bpc 0.799  lr 3.98e-04  tok/s 151455
+[nanogym] eval    9750/60000  train 0.5158  val 0.7409  gap +0.2251
+[nanogym] step   9800/60000  loss 0.5728  bpc 0.826  lr 3.97e-04  tok/s 199459
+[nanogym] step   9900/60000  loss 0.5579  bpc 0.805  lr 3.97e-04  tok/s 198917
+[nanogym] step  10000/60000  loss 0.5834  bpc 0.842  lr 3.96e-04  tok/s 206218
+[nanogym] eval   10000/60000  train 0.5117  val 0.7493  gap +0.2376
+[nanogym] step  10100/60000  loss 0.5371  bpc 0.775  lr 3.96e-04  tok/s 200434
+[nanogym] step  10200/60000  loss 0.5725  bpc 0.826  lr 3.95e-04  tok/s 190066
+[nanogym] eval   10250/60000  train 0.5033  val 0.7376  gap +0.2343
+[nanogym] step  10300/60000  loss 0.5289  bpc 0.763  lr 3.95e-04  tok/s 195168
+[nanogym] step  10400/60000  loss 0.5424  bpc 0.782  lr 3.94e-04  tok/s 211179
+[nanogym] step  10500/60000  loss 0.5348  bpc 0.772  lr 3.94e-04  tok/s 192635
+[nanogym] eval   10500/60000  train 0.5009  val 0.7392  gap +0.2383
+[nanogym] step  10600/60000  loss 0.5632  bpc 0.813  lr 3.93e-04  tok/s 181231
+[nanogym] step  10700/60000  loss 0.5436  bpc 0.784  lr 3.93e-04  tok/s 210707
+[nanogym] eval   10750/60000  train 0.4951  val 0.7339  gap +0.2388
+[nanogym] step  10800/60000  loss 0.5553  bpc 0.801  lr 3.92e-04  tok/s 185354
+[nanogym] step  10900/60000  loss 0.5406  bpc 0.780  lr 3.92e-04  tok/s 216254
+[nanogym] step  11000/60000  loss 0.5071  bpc 0.732  lr 3.91e-04  tok/s 161734
+[nanogym] eval   11000/60000  train 0.4836  val 0.7313  gap +0.2478
+[nanogym] step  11100/60000  loss 0.5475  bpc 0.790  lr 3.91e-04  tok/s 217611
+[nanogym] step  11200/60000  loss 0.5595  bpc 0.807  lr 3.90e-04  tok/s 201047
+[nanogym] eval   11250/60000  train 0.4848  val 0.7304  gap +0.2455
+[nanogym] step  11300/60000  loss 0.5012  bpc 0.723  lr 3.90e-04  tok/s 207203
+[nanogym] step  11400/60000  loss 0.5191  bpc 0.749  lr 3.89e-04  tok/s 213643
+[nanogym] step  11500/60000  loss 0.5289  bpc 0.763  lr 3.89e-04  tok/s 193048
+[nanogym] eval   11500/60000  train 0.4842  val 0.7319  gap +0.2477
+[nanogym] step  11600/60000  loss 0.5300  bpc 0.765  lr 3.88e-04  tok/s 180417
+[nanogym] step  11700/60000  loss 0.4879  bpc 0.704  lr 3.87e-04  tok/s 110619
+[nanogym] eval   11750/60000  train 0.4699  val 0.7353  gap +0.2654
+[nanogym] step  11800/60000  loss 0.5106  bpc 0.737  lr 3.87e-04  tok/s 211313
+[nanogym] step  11900/60000  loss 0.5492  bpc 0.792  lr 3.86e-04  tok/s 214322
+[nanogym] step  12000/60000  loss 0.5286  bpc 0.763  lr 3.86e-04  tok/s 176883
+[nanogym] eval   12000/60000  train 0.4686  val 0.7469  gap +0.2782
+[nanogym] step  12100/60000  loss 0.5066  bpc 0.731  lr 3.85e-04  tok/s 206325
+[nanogym] step  12200/60000  loss 0.5350  bpc 0.772  lr 3.85e-04  tok/s 205694
+[nanogym] eval   12250/60000  train 0.4671  val 0.7402  gap +0.2732
+[nanogym] step  12300/60000  loss 0.5383  bpc 0.777  lr 3.84e-04  tok/s 182583
+[nanogym] step  12400/60000  loss 0.5770  bpc 0.832  lr 3.83e-04  tok/s 184029
+[nanogym] step  12500/60000  loss 0.5430  bpc 0.783  lr 3.83e-04  tok/s 224698
+[nanogym] eval   12500/60000  train 0.4600  val 0.7469  gap +0.2869
+[nanogym] step  12600/60000  loss 0.5059  bpc 0.730  lr 3.82e-04  tok/s 217988
+[nanogym] step  12700/60000  loss 0.5423  bpc 0.782  lr 3.82e-04  tok/s 180887
+[nanogym] eval   12750/60000  train 0.4566  val 0.7418  gap +0.2851
+[nanogym] step  12800/60000  loss 0.5313  bpc 0.766  lr 3.81e-04  tok/s 217452
+[nanogym] step  12900/60000  loss 0.5121  bpc 0.739  lr 3.80e-04  tok/s 207713
+[nanogym] step  13000/60000  loss 0.5260  bpc 0.759  lr 3.80e-04  tok/s 200312
+[nanogym] eval   13000/60000  train 0.4528  val 0.7392  gap +0.2864
+[nanogym] step  13100/60000  loss 0.4935  bpc 0.712  lr 3.79e-04  tok/s 205398
+[nanogym] step  13200/60000  loss 0.5276  bpc 0.761  lr 3.79e-04  tok/s 175237
+[nanogym] eval   13250/60000  train 0.4523  val 0.7436  gap +0.2913
+[nanogym] step  13300/60000  loss 0.5172  bpc 0.746  lr 3.78e-04  tok/s 218851
+[nanogym] step  13400/60000  loss 0.5335  bpc 0.770  lr 3.77e-04  tok/s 171886
+[nanogym] step  13500/60000  loss 0.4998  bpc 0.721  lr 3.77e-04  tok/s 218207
+[nanogym] eval   13500/60000  train 0.4487  val 0.7416  gap +0.2930
+[nanogym] step  13600/60000  loss 0.5376  bpc 0.776  lr 3.76e-04  tok/s 220051
+[nanogym] step  13700/60000  loss 0.5319  bpc 0.767  lr 3.75e-04  tok/s 218676
+[nanogym] eval   13750/60000  train 0.4439  val 0.7381  gap +0.2942
+[nanogym] step  13800/60000  loss 0.5113  bpc 0.738  lr 3.75e-04  tok/s 181087
+[nanogym] step  13900/60000  loss 0.4980  bpc 0.718  lr 3.74e-04  tok/s 175131
+[nanogym] step  14000/60000  loss 0.5344  bpc 0.771  lr 3.73e-04  tok/s 180565
+[nanogym] eval   14000/60000  train 0.4485  val 0.7423  gap +0.2937
+[nanogym] step  14100/60000  loss 0.4950  bpc 0.714  lr 3.73e-04  tok/s 184462
+[nanogym] step  14200/60000  loss 0.5210  bpc 0.752  lr 3.72e-04  tok/s 154365
+[nanogym] eval   14250/60000  train 0.4499  val 0.7437  gap +0.2938
+[nanogym] step  14300/60000  loss 0.5244  bpc 0.757  lr 3.71e-04  tok/s 218668
+[nanogym] step  14400/60000  loss 0.5039  bpc 0.727  lr 3.71e-04  tok/s 144858
+[nanogym] step  14500/60000  loss 0.5063  bpc 0.730  lr 3.70e-04  tok/s 192255
+[nanogym] eval   14500/60000  train 0.4389  val 0.7414  gap +0.3025
+[nanogym] step  14600/60000  loss 0.5420  bpc 0.782  lr 3.69e-04  tok/s 167975
+[nanogym] step  14700/60000  loss 0.4969  bpc 0.717  lr 3.69e-04  tok/s 205214
+[nanogym] eval   14750/60000  train 0.4350  val 0.7469  gap +0.3118
+[nanogym] step  14800/60000  loss 0.4758  bpc 0.686  lr 3.68e-04  tok/s 211963
+[nanogym] step  14900/60000  loss 0.4834  bpc 0.697  lr 3.67e-04  tok/s 202752
+[nanogym] step  15000/60000  loss 0.5031  bpc 0.726  lr 3.67e-04  tok/s 181931
+[nanogym] eval   15000/60000  train 0.4281  val 0.7473  gap +0.3191
+[nanogym] step  15100/60000  loss 0.4829  bpc 0.697  lr 3.66e-04  tok/s 214391
+[nanogym] step  15200/60000  loss 0.4895  bpc 0.706  lr 3.65e-04  tok/s 198048
+[nanogym] eval   15250/60000  train 0.4294  val 0.7495  gap +0.3201
+[nanogym] step  15300/60000  loss 0.5374  bpc 0.775  lr 3.64e-04  tok/s 193487
+[nanogym] step  15400/60000  loss 0.4544  bpc 0.655  lr 3.64e-04  tok/s 211320
+[nanogym] step  15500/60000  loss 0.5031  bpc 0.726  lr 3.63e-04  tok/s 220154
+[nanogym] eval   15500/60000  train 0.4285  val 0.7496  gap +0.3211
+[nanogym] step  15600/60000  loss 0.5076  bpc 0.732  lr 3.62e-04  tok/s 215042
+[nanogym] step  15700/60000  loss 0.4800  bpc 0.693  lr 3.62e-04  tok/s 171500
+[nanogym] eval   15750/60000  train 0.4195  val 0.7503  gap +0.3309
+[nanogym] step  15800/60000  loss 0.4589  bpc 0.662  lr 3.61e-04  tok/s 213937
+[nanogym] step  15900/60000  loss 0.4690  bpc 0.677  lr 3.60e-04  tok/s 184160
+[nanogym] step  16000/60000  loss 0.4451  bpc 0.642  lr 3.59e-04  tok/s 194730
+[nanogym] eval   16000/60000  train 0.4207  val 0.7602  gap +0.3396
+[nanogym] step  16100/60000  loss 0.4940  bpc 0.713  lr 3.59e-04  tok/s 214375
+[nanogym] step  16200/60000  loss 0.4978  bpc 0.718  lr 3.58e-04  tok/s 171304
+[nanogym] eval   16250/60000  train 0.4232  val 0.7497  gap +0.3265
+[nanogym] step  16300/60000  loss 0.4693  bpc 0.677  lr 3.57e-04  tok/s 211272
+[nanogym] step  16400/60000  loss 0.4894  bpc 0.706  lr 3.56e-04  tok/s 161380
+[nanogym] step  16500/60000  loss 0.4783  bpc 0.690  lr 3.56e-04  tok/s 225380
+[nanogym] eval   16500/60000  train 0.4163  val 0.7549  gap +0.3387
+[nanogym] step  16600/60000  loss 0.4720  bpc 0.681  lr 3.55e-04  tok/s 188600
+[nanogym] step  16700/60000  loss 0.4780  bpc 0.690  lr 3.54e-04  tok/s 185839
+[nanogym] eval   16750/60000  train 0.4094  val 0.7568  gap +0.3474
+[nanogym] step  16800/60000  loss 0.4712  bpc 0.680  lr 3.53e-04  tok/s 157456
+[nanogym] step  16900/60000  loss 0.5146  bpc 0.742  lr 3.53e-04  tok/s 199700
+[nanogym] step  17000/60000  loss 0.4610  bpc 0.665  lr 3.52e-04  tok/s 218732
+[nanogym] eval   17000/60000  train 0.4147  val 0.7576  gap +0.3429
+[nanogym] step  17100/60000  loss 0.4331  bpc 0.625  lr 3.51e-04  tok/s 177031
+[nanogym] step  17200/60000  loss 0.4822  bpc 0.696  lr 3.50e-04  tok/s 205431
+[nanogym] eval   17250/60000  train 0.4075  val 0.7700  gap +0.3625
+[nanogym] step  17300/60000  loss 0.4650  bpc 0.671  lr 3.50e-04  tok/s 146796
+[nanogym] step  17400/60000  loss 0.4702  bpc 0.678  lr 3.49e-04  tok/s 194083
+[nanogym] step  17500/60000  loss 0.4833  bpc 0.697  lr 3.48e-04  tok/s 198668
+[nanogym] eval   17500/60000  train 0.4025  val 0.7623  gap +0.3597
+[nanogym] step  17600/60000  loss 0.4731  bpc 0.683  lr 3.47e-04  tok/s 180196
+[nanogym] step  17700/60000  loss 0.4922  bpc 0.710  lr 3.46e-04  tok/s 168654
+[nanogym] eval   17750/60000  train 0.4000  val 0.7442  gap +0.3443
+[nanogym] step  17800/60000  loss 0.4424  bpc 0.638  lr 3.46e-04  tok/s 186086
+[nanogym] step  17900/60000  loss 0.4429  bpc 0.639  lr 3.45e-04  tok/s 191652
+[nanogym] step  18000/60000  loss 0.5143  bpc 0.742  lr 3.44e-04  tok/s 209077
+[nanogym] eval   18000/60000  train 0.3993  val 0.7539  gap +0.3545
+[nanogym] step  18100/60000  loss 0.4730  bpc 0.682  lr 3.43e-04  tok/s 217190
+[nanogym] step  18200/60000  loss 0.4683  bpc 0.676  lr 3.42e-04  tok/s 222725
+[nanogym] eval   18250/60000  train 0.3980  val 0.7558  gap +0.3578
+[nanogym] step  18300/60000  loss 0.4744  bpc 0.684  lr 3.42e-04  tok/s 193671
+[nanogym] step  18400/60000  loss 0.4570  bpc 0.659  lr 3.41e-04  tok/s 150615
+[nanogym] step  18500/60000  loss 0.4667  bpc 0.673  lr 3.40e-04  tok/s 216478
+[nanogym] eval   18500/60000  train 0.3895  val 0.7435  gap +0.3540
+[nanogym] step  18600/60000  loss 0.4648  bpc 0.671  lr 3.39e-04  tok/s 200289
+[nanogym] step  18700/60000  loss 0.4484  bpc 0.647  lr 3.38e-04  tok/s 132844
+[nanogym] eval   18750/60000  train 0.3994  val 0.7541  gap +0.3546
+[nanogym] step  18800/60000  loss 0.4672  bpc 0.674  lr 3.38e-04  tok/s 201698
+[nanogym] step  18900/60000  loss 0.4505  bpc 0.650  lr 3.37e-04  tok/s 210485
+[nanogym] step  19000/60000  loss 0.4419  bpc 0.638  lr 3.36e-04  tok/s 224876
+[nanogym] eval   19000/60000  train 0.3901  val 0.7580  gap +0.3678
+[nanogym] step  19100/60000  loss 0.4388  bpc 0.633  lr 3.35e-04  tok/s 214960
+[nanogym] step  19200/60000  loss 0.4385  bpc 0.633  lr 3.34e-04  tok/s 226626
+[nanogym] eval   19250/60000  train 0.3904  val 0.7559  gap +0.3655
+[nanogym] step  19300/60000  loss 0.4472  bpc 0.645  lr 3.33e-04  tok/s 226907
+[nanogym] step  19400/60000  loss 0.4452  bpc 0.642  lr 3.33e-04  tok/s 230191
+[nanogym] step  19500/60000  loss 0.4622  bpc 0.667  lr 3.32e-04  tok/s 229820
+[nanogym] eval   19500/60000  train 0.3821  val 0.7640  gap +0.3819
+[nanogym] step  19600/60000  loss 0.4341  bpc 0.626  lr 3.31e-04  tok/s 211314
+[nanogym] step  19700/60000  loss 0.4507  bpc 0.650  lr 3.30e-04  tok/s 216931
+[nanogym] eval   19750/60000  train 0.3893  val 0.7660  gap +0.3767
+[nanogym] step  19800/60000  loss 0.4460  bpc 0.643  lr 3.29e-04  tok/s 217371
+[nanogym] step  19900/60000  loss 0.4774  bpc 0.689  lr 3.28e-04  tok/s 226303
+[nanogym] step  20000/60000  loss 0.4337  bpc 0.626  lr 3.27e-04  tok/s 184513
+[nanogym] eval   20000/60000  train 0.3860  val 0.7651  gap +0.3790
+[nanogym] step  20100/60000  loss 0.4178  bpc 0.603  lr 3.27e-04  tok/s 194156
+[nanogym] step  20200/60000  loss 0.4200  bpc 0.606  lr 3.26e-04  tok/s 221943
+[nanogym] eval   20250/60000  train 0.3760  val 0.7576  gap +0.3817
+[nanogym] step  20300/60000  loss 0.4468  bpc 0.645  lr 3.25e-04  tok/s 173133
+[nanogym] step  20400/60000  loss 0.4501  bpc 0.649  lr 3.24e-04  tok/s 169876
+[nanogym] step  20500/60000  loss 0.4387  bpc 0.633  lr 3.23e-04  tok/s 213650
+[nanogym] eval   20500/60000  train 0.3815  val 0.7600  gap +0.3784
+[nanogym] step  20600/60000  loss 0.4093  bpc 0.591  lr 3.22e-04  tok/s 172140
+[nanogym] step  20700/60000  loss 0.4582  bpc 0.661  lr 3.21e-04  tok/s 204042
+[nanogym] eval   20750/60000  train 0.3764  val 0.7706  gap +0.3941
+[nanogym] step  20800/60000  loss 0.4468  bpc 0.645  lr 3.20e-04  tok/s 194982
+[nanogym] step  20900/60000  loss 0.4141  bpc 0.597  lr 3.20e-04  tok/s 190623
+[nanogym] step  21000/60000  loss 0.4322  bpc 0.624  lr 3.19e-04  tok/s 216954
+[nanogym] eval   21000/60000  train 0.3709  val 0.7691  gap +0.3983
+[nanogym] step  21100/60000  loss 0.4364  bpc 0.630  lr 3.18e-04  tok/s 224098
+[nanogym] step  21200/60000  loss 0.4487  bpc 0.647  lr 3.17e-04  tok/s 205848
+[nanogym] eval   21250/60000  train 0.3743  val 0.7704  gap +0.3962
+[nanogym] step  21300/60000  loss 0.4520  bpc 0.652  lr 3.16e-04  tok/s 217122
+[nanogym] step  21400/60000  loss 0.4476  bpc 0.646  lr 3.15e-04  tok/s 231948
+[nanogym] step  21500/60000  loss 0.4057  bpc 0.585  lr 3.14e-04  tok/s 228732
+[nanogym] eval   21500/60000  train 0.3668  val 0.7665  gap +0.3997
+[nanogym] step  21600/60000  loss 0.4404  bpc 0.635  lr 3.13e-04  tok/s 232868
+[nanogym] step  21700/60000  loss 0.4075  bpc 0.588  lr 3.12e-04  tok/s 182514
+[nanogym] eval   21750/60000  train 0.3646  val 0.7794  gap +0.4149
+[nanogym] step  21800/60000  loss 0.4558  bpc 0.658  lr 3.12e-04  tok/s 161861
+[nanogym] step  21900/60000  loss 0.4504  bpc 0.650  lr 3.11e-04  tok/s 189631
+[nanogym] step  22000/60000  loss 0.4143  bpc 0.598  lr 3.10e-04  tok/s 194928
+[nanogym] eval   22000/60000  train 0.3595  val 0.7814  gap +0.4219
+[nanogym] step  22100/60000  loss 0.3977  bpc 0.574  lr 3.09e-04  tok/s 200579
+[nanogym] step  22200/60000  loss 0.4295  bpc 0.620  lr 3.08e-04  tok/s 180628
+[nanogym] eval   22250/60000  train 0.3644  val 0.7727  gap +0.4084
+[nanogym] step  22300/60000  loss 0.4385  bpc 0.633  lr 3.07e-04  tok/s 209411
+[nanogym] step  22400/60000  loss 0.4119  bpc 0.594  lr 3.06e-04  tok/s 158798
+[nanogym] step  22500/60000  loss 0.4184  bpc 0.604  lr 3.05e-04  tok/s 180514
+[nanogym] eval   22500/60000  train 0.3570  val 0.7779  gap +0.4209
+[nanogym] step  22600/60000  loss 0.4381  bpc 0.632  lr 3.04e-04  tok/s 199713
+[nanogym] step  22700/60000  loss 0.4554  bpc 0.657  lr 3.03e-04  tok/s 199695
+[nanogym] eval   22750/60000  train 0.3596  val 0.7808  gap +0.4212
+[nanogym] step  22800/60000  loss 0.4466  bpc 0.644  lr 3.02e-04  tok/s 194250
+[nanogym] step  22900/60000  loss 0.4355  bpc 0.628  lr 3.02e-04  tok/s 215597
+[nanogym] step  23000/60000  loss 0.4102  bpc 0.592  lr 3.01e-04  tok/s 217131
+[nanogym] eval   23000/60000  train 0.3527  val 0.7748  gap +0.4221
+[nanogym] step  23100/60000  loss 0.4198  bpc 0.606  lr 3.00e-04  tok/s 190536
+[nanogym] step  23200/60000  loss 0.4119  bpc 0.594  lr 2.99e-04  tok/s 214892
+[nanogym] eval   23250/60000  train 0.3463  val 0.7836  gap +0.4374
+[nanogym] step  23300/60000  loss 0.4354  bpc 0.628  lr 2.98e-04  tok/s 192521
+[nanogym] step  23400/60000  loss 0.4234  bpc 0.611  lr 2.97e-04  tok/s 196997
+[nanogym] step  23500/60000  loss 0.4374  bpc 0.631  lr 2.96e-04  tok/s 230453
+[nanogym] eval   23500/60000  train 0.3427  val 0.7849  gap +0.4421
+[nanogym] step  23600/60000  loss 0.4154  bpc 0.599  lr 2.95e-04  tok/s 208461
+[nanogym] step  23700/60000  loss 0.4147  bpc 0.598  lr 2.94e-04  tok/s 193507
+[nanogym] eval   23750/60000  train 0.3453  val 0.7843  gap +0.4390
+[nanogym] step  23800/60000  loss 0.4497  bpc 0.649  lr 2.93e-04  tok/s 216175
+[nanogym] step  23900/60000  loss 0.4461  bpc 0.644  lr 2.92e-04  tok/s 250928
+[nanogym] step  24000/60000  loss 0.4220  bpc 0.609  lr 2.91e-04  tok/s 207561
+[nanogym] eval   24000/60000  train 0.3460  val 0.7806  gap +0.4346
+[nanogym] step  24100/60000  loss 0.4265  bpc 0.615  lr 2.90e-04  tok/s 198355
+[nanogym] step  24200/60000  loss 0.4518  bpc 0.652  lr 2.89e-04  tok/s 213915
+[nanogym] eval   24250/60000  train 0.3407  val 0.7859  gap +0.4453
+[nanogym] step  24300/60000  loss 0.4164  bpc 0.601  lr 2.88e-04  tok/s 202493
+[nanogym] step  24400/60000  loss 0.4118  bpc 0.594  lr 2.87e-04  tok/s 193073
+[nanogym] step  24500/60000  loss 0.4532  bpc 0.654  lr 2.86e-04  tok/s 212561
+[nanogym] eval   24500/60000  train 0.3409  val 0.7867  gap +0.4458
+[nanogym] step  24600/60000  loss 0.4116  bpc 0.594  lr 2.86e-04  tok/s 211551
+[nanogym] step  24700/60000  loss 0.4260  bpc 0.615  lr 2.85e-04  tok/s 216042
+[nanogym] eval   24750/60000  train 0.3329  val 0.7980  gap +0.4650
+[nanogym] step  24800/60000  loss 0.4100  bpc 0.592  lr 2.84e-04  tok/s 210487
+[nanogym] step  24900/60000  loss 0.3997  bpc 0.577  lr 2.83e-04  tok/s 201379
+[nanogym] step  25000/60000  loss 0.4017  bpc 0.580  lr 2.82e-04  tok/s 204082
+[nanogym] eval   25000/60000  train 0.3364  val 0.7888  gap +0.4524
+[nanogym] step  25100/60000  loss 0.4200  bpc 0.606  lr 2.81e-04  tok/s 194082
+[nanogym] step  25200/60000  loss 0.4390  bpc 0.633  lr 2.80e-04  tok/s 49750
+[nanogym] eval   25250/60000  train 0.3335  val 0.7992  gap +0.4656
+[nanogym] step  25300/60000  loss 0.3819  bpc 0.551  lr 2.79e-04  tok/s 200533
+[nanogym] step  25400/60000  loss 0.4056  bpc 0.585  lr 2.78e-04  tok/s 187685
+[nanogym] step  25500/60000  loss 0.4303  bpc 0.621  lr 2.77e-04  tok/s 202258
+[nanogym] eval   25500/60000  train 0.3312  val 0.7999  gap +0.4687
+[nanogym] step  25600/60000  loss 0.4279  bpc 0.617  lr 2.76e-04  tok/s 218898
+[nanogym] step  25700/60000  loss 0.4115  bpc 0.594  lr 2.75e-04  tok/s 200244
+[nanogym] eval   25750/60000  train 0.3288  val 0.7984  gap +0.4695
+[nanogym] step  25800/60000  loss 0.3994  bpc 0.576  lr 2.74e-04  tok/s 201990
+[nanogym] step  25900/60000  loss 0.4139  bpc 0.597  lr 2.73e-04  tok/s 222015
+[nanogym] step  26000/60000  loss 0.3783  bpc 0.546  lr 2.72e-04  tok/s 181619
+[nanogym] eval   26000/60000  train 0.3249  val 0.7910  gap +0.4660
+[nanogym] step  26100/60000  loss 0.3903  bpc 0.563  lr 2.71e-04  tok/s 197106
+[nanogym] step  26200/60000  loss 0.4002  bpc 0.577  lr 2.70e-04  tok/s 197611
+[nanogym] eval   26250/60000  train 0.3251  val 0.8022  gap +0.4771
+[nanogym] step  26300/60000  loss 0.3955  bpc 0.571  lr 2.69e-04  tok/s 215919
+[nanogym] step  26400/60000  loss 0.4065  bpc 0.586  lr 2.68e-04  tok/s 203603
+[nanogym] step  26500/60000  loss 0.4126  bpc 0.595  lr 2.67e-04  tok/s 198923
+[nanogym] eval   26500/60000  train 0.3218  val 0.8083  gap +0.4865
+[nanogym] step  26600/60000  loss 0.4144  bpc 0.598  lr 2.66e-04  tok/s 209215
+[nanogym] step  26700/60000  loss 0.4037  bpc 0.582  lr 2.65e-04  tok/s 190736
+[nanogym] eval   26750/60000  train 0.3235  val 0.8018  gap +0.4783
+[nanogym] step  26800/60000  loss 0.4285  bpc 0.618  lr 2.64e-04  tok/s 221346
+[nanogym] step  26900/60000  loss 0.3938  bpc 0.568  lr 2.63e-04  tok/s 215872
+[nanogym] step  27000/60000  loss 0.3890  bpc 0.561  lr 2.62e-04  tok/s 190909
+[nanogym] eval   27000/60000  train 0.3215  val 0.8027  gap +0.4813
+[nanogym] step  27100/60000  loss 0.3780  bpc 0.545  lr 2.61e-04  tok/s 225850
+[nanogym] step  27200/60000  loss 0.3943  bpc 0.569  lr 2.60e-04  tok/s 183513
+[nanogym] eval   27250/60000  train 0.3144  val 0.8073  gap +0.4929
+[nanogym] step  27300/60000  loss 0.3850  bpc 0.555  lr 2.59e-04  tok/s 147995
+[nanogym] step  27400/60000  loss 0.4006  bpc 0.578  lr 2.58e-04  tok/s 207541
+[nanogym] step  27500/60000  loss 0.3917  bpc 0.565  lr 2.57e-04  tok/s 201121
+[nanogym] eval   27500/60000  train 0.3099  val 0.8114  gap +0.5015
+[nanogym] step  27600/60000  loss 0.3848  bpc 0.555  lr 2.56e-04  tok/s 187125
+[nanogym] step  27700/60000  loss 0.3863  bpc 0.557  lr 2.55e-04  tok/s 165713
+[nanogym] eval   27750/60000  train 0.3100  val 0.8169  gap +0.5069
+[nanogym] step  27800/60000  loss 0.3557  bpc 0.513  lr 2.54e-04  tok/s 217011
+[nanogym] step  27900/60000  loss 0.4027  bpc 0.581  lr 2.53e-04  tok/s 219204
+[nanogym] step  28000/60000  loss 0.4083  bpc 0.589  lr 2.52e-04  tok/s 191966
+[nanogym] eval   28000/60000  train 0.3096  val 0.8214  gap +0.5118
+[nanogym] step  28100/60000  loss 0.3907  bpc 0.564  lr 2.51e-04  tok/s 213824
+[nanogym] step  28200/60000  loss 0.3792  bpc 0.547  lr 2.50e-04  tok/s 195040
+[nanogym] eval   28250/60000  train 0.3035  val 0.8175  gap +0.5140
+[nanogym] step  28300/60000  loss 0.3939  bpc 0.568  lr 2.49e-04  tok/s 203568
+[nanogym] step  28400/60000  loss 0.3747  bpc 0.541  lr 2.48e-04  tok/s 191799
+[nanogym] step  28500/60000  loss 0.3712  bpc 0.536  lr 2.47e-04  tok/s 174862
+[nanogym] eval   28500/60000  train 0.2985  val 0.8179  gap +0.5194
+[nanogym] step  28600/60000  loss 0.4135  bpc 0.597  lr 2.46e-04  tok/s 213558
+[nanogym] step  28700/60000  loss 0.3728  bpc 0.538  lr 2.45e-04  tok/s 216019
+[nanogym] eval   28750/60000  train 0.3007  val 0.8243  gap +0.5237
+[nanogym] step  28800/60000  loss 0.3898  bpc 0.562  lr 2.44e-04  tok/s 205421
+[nanogym] step  28900/60000  loss 0.3816  bpc 0.550  lr 2.43e-04  tok/s 196867
+[nanogym] step  29000/60000  loss 0.3855  bpc 0.556  lr 2.43e-04  tok/s 189062
+[nanogym] eval   29000/60000  train 0.3035  val 0.8141  gap +0.5106
+[nanogym] step  29100/60000  loss 0.4201  bpc 0.606  lr 2.42e-04  tok/s 185998
+[nanogym] step  29200/60000  loss 0.3979  bpc 0.574  lr 2.41e-04  tok/s 193012
+[nanogym] eval   29250/60000  train 0.2986  val 0.8080  gap +0.5094
+[nanogym] step  29300/60000  loss 0.3826  bpc 0.552  lr 2.40e-04  tok/s 210267
+[nanogym] step  29400/60000  loss 0.3840  bpc 0.554  lr 2.39e-04  tok/s 213725
+[nanogym] step  29500/60000  loss 0.3519  bpc 0.508  lr 2.38e-04  tok/s 126968
+[nanogym] eval   29500/60000  train 0.2905  val 0.8209  gap +0.5305
+[nanogym] step  29600/60000  loss 0.3472  bpc 0.501  lr 2.37e-04  tok/s 191869
+[nanogym] step  29700/60000  loss 0.3742  bpc 0.540  lr 2.36e-04  tok/s 184896
+[nanogym] eval   29750/60000  train 0.2895  val 0.8216  gap +0.5321
+[nanogym] step  29800/60000  loss 0.3843  bpc 0.554  lr 2.35e-04  tok/s 216765
+[nanogym] step  29900/60000  loss 0.3862  bpc 0.557  lr 2.34e-04  tok/s 207039
+[nanogym] step  30000/60000  loss 0.3658  bpc 0.528  lr 2.33e-04  tok/s 210486
+[nanogym] eval   30000/60000  train 0.2918  val 0.8149  gap +0.5231
+[nanogym] step  30100/60000  loss 0.3604  bpc 0.520  lr 2.32e-04  tok/s 159902
+[nanogym] step  30200/60000  loss 0.3803  bpc 0.549  lr 2.31e-04  tok/s 211807
+[nanogym] eval   30250/60000  train 0.2819  val 0.8280  gap +0.5460
+[nanogym] step  30300/60000  loss 0.3781  bpc 0.545  lr 2.30e-04  tok/s 209666
+[nanogym] step  30400/60000  loss 0.3723  bpc 0.537  lr 2.29e-04  tok/s 200494
+[nanogym] step  30500/60000  loss 0.3807  bpc 0.549  lr 2.28e-04  tok/s 185900
+[nanogym] eval   30500/60000  train 0.2877  val 0.8278  gap +0.5401
+[nanogym] step  30600/60000  loss 0.3782  bpc 0.546  lr 2.27e-04  tok/s 197879
+[nanogym] step  30700/60000  loss 0.3682  bpc 0.531  lr 2.26e-04  tok/s 204530
+[nanogym] eval   30750/60000  train 0.2898  val 0.8285  gap +0.5387
+[nanogym] step  30800/60000  loss 0.3699  bpc 0.534  lr 2.25e-04  tok/s 201512
+[nanogym] step  30900/60000  loss 0.3516  bpc 0.507  lr 2.24e-04  tok/s 178290
+[nanogym] step  31000/60000  loss 0.3667  bpc 0.529  lr 2.23e-04  tok/s 223277
+[nanogym] eval   31000/60000  train 0.2848  val 0.8317  gap +0.5469
+[nanogym] step  31100/60000  loss 0.3716  bpc 0.536  lr 2.22e-04  tok/s 151608
+[nanogym] step  31200/60000  loss 0.3593  bpc 0.518  lr 2.21e-04  tok/s 229278
+[nanogym] eval   31250/60000  train 0.2815  val 0.8478  gap +0.5663
+[nanogym] step  31300/60000  loss 0.3476  bpc 0.501  lr 2.20e-04  tok/s 190543
+[nanogym] step  31400/60000  loss 0.3573  bpc 0.516  lr 2.19e-04  tok/s 199889
+[nanogym] step  31500/60000  loss 0.3454  bpc 0.498  lr 2.18e-04  tok/s 223377
+[nanogym] eval   31500/60000  train 0.2749  val 0.8474  gap +0.5725
+[nanogym] step  31600/60000  loss 0.3628  bpc 0.523  lr 2.17e-04  tok/s 187599
+[nanogym] step  31700/60000  loss 0.3779  bpc 0.545  lr 2.16e-04  tok/s 220233
+[nanogym] eval   31750/60000  train 0.2803  val 0.8307  gap +0.5504
+[nanogym] step  31800/60000  loss 0.3805  bpc 0.549  lr 2.15e-04  tok/s 230811
+[nanogym] step  31900/60000  loss 0.3676  bpc 0.530  lr 2.14e-04  tok/s 233665
+[nanogym] step  32000/60000  loss 0.3577  bpc 0.516  lr 2.13e-04  tok/s 218061
+[nanogym] eval   32000/60000  train 0.2749  val 0.8468  gap +0.5720
+[nanogym] step  32100/60000  loss 0.3632  bpc 0.524  lr 2.12e-04  tok/s 223161
+[nanogym] step  32200/60000  loss 0.3574  bpc 0.516  lr 2.11e-04  tok/s 224828
+[nanogym] eval   32250/60000  train 0.2778  val 0.8427  gap +0.5649
+[nanogym] step  32300/60000  loss 0.3581  bpc 0.517  lr 2.10e-04  tok/s 206565
+[nanogym] step  32400/60000  loss 0.3618  bpc 0.522  lr 2.09e-04  tok/s 182939
+[nanogym] step  32500/60000  loss 0.3671  bpc 0.530  lr 2.08e-04  tok/s 203501
+[nanogym] eval   32500/60000  train 0.2780  val 0.8330  gap +0.5550
+[nanogym] step  32600/60000  loss 0.3611  bpc 0.521  lr 2.07e-04  tok/s 219452
+[nanogym] step  32700/60000  loss 0.3783  bpc 0.546  lr 2.06e-04  tok/s 232856
+[nanogym] eval   32750/60000  train 0.2668  val 0.8588  gap +0.5920
+[nanogym] step  32800/60000  loss 0.3368  bpc 0.486  lr 2.05e-04  tok/s 219870
+[nanogym] step  32900/60000  loss 0.3624  bpc 0.523  lr 2.04e-04  tok/s 227458
+[nanogym] step  33000/60000  loss 0.3639  bpc 0.525  lr 2.03e-04  tok/s 173367
+[nanogym] eval   33000/60000  train 0.2685  val 0.8498  gap +0.5812
+[nanogym] step  33100/60000  loss 0.3585  bpc 0.517  lr 2.02e-04  tok/s 225138
+[nanogym] step  33200/60000  loss 0.3569  bpc 0.515  lr 2.01e-04  tok/s 231065
+[nanogym] eval   33250/60000  train 0.2655  val 0.8409  gap +0.5754
+[nanogym] step  33300/60000  loss 0.3579  bpc 0.516  lr 2.00e-04  tok/s 192753
+[nanogym] step  33400/60000  loss 0.3382  bpc 0.488  lr 1.99e-04  tok/s 219770
+[nanogym] step  33500/60000  loss 0.3654  bpc 0.527  lr 1.98e-04  tok/s 207141
+[nanogym] eval   33500/60000  train 0.2622  val 0.8528  gap +0.5906
+[nanogym] step  33600/60000  loss 0.3438  bpc 0.496  lr 1.97e-04  tok/s 205895
+[nanogym] step  33700/60000  loss 0.3787  bpc 0.546  lr 1.96e-04  tok/s 166714
+[nanogym] eval   33750/60000  train 0.2609  val 0.8624  gap +0.6015
+[nanogym] step  33800/60000  loss 0.3376  bpc 0.487  lr 1.95e-04  tok/s 207584
+[nanogym] step  33900/60000  loss 0.3414  bpc 0.492  lr 1.94e-04  tok/s 223296
+[nanogym] step  34000/60000  loss 0.3425  bpc 0.494  lr 1.93e-04  tok/s 160144
+[nanogym] eval   34000/60000  train 0.2560  val 0.8548  gap +0.5987
+[nanogym] step  34100/60000  loss 0.3614  bpc 0.521  lr 1.92e-04  tok/s 220668
+[nanogym] step  34200/60000  loss 0.3647  bpc 0.526  lr 1.91e-04  tok/s 211454
+[nanogym] eval   34250/60000  train 0.2577  val 0.8596  gap +0.6020
+[nanogym] step  34300/60000  loss 0.3543  bpc 0.511  lr 1.90e-04  tok/s 225840
+[nanogym] step  34400/60000  loss 0.3340  bpc 0.482  lr 1.89e-04  tok/s 228900
+[nanogym] step  34500/60000  loss 0.3721  bpc 0.537  lr 1.88e-04  tok/s 220273
+[nanogym] eval   34500/60000  train 0.2594  val 0.8621  gap +0.6027
+[nanogym] step  34600/60000  loss 0.3218  bpc 0.464  lr 1.87e-04  tok/s 228602
+[nanogym] step  34700/60000  loss 0.3361  bpc 0.485  lr 1.86e-04  tok/s 215641
+[nanogym] eval   34750/60000  train 0.2551  val 0.8597  gap +0.6047
+[nanogym] step  34800/60000  loss 0.3222  bpc 0.465  lr 1.85e-04  tok/s 218900
+[nanogym] step  34900/60000  loss 0.3507  bpc 0.506  lr 1.84e-04  tok/s 187072
+[nanogym] step  35000/60000  loss 0.3493  bpc 0.504  lr 1.83e-04  tok/s 183049
+[nanogym] eval   35000/60000  train 0.2563  val 0.8554  gap +0.5991
+[nanogym] step  35100/60000  loss 0.3167  bpc 0.457  lr 1.82e-04  tok/s 230249
+[nanogym] step  35200/60000  loss 0.3262  bpc 0.471  lr 1.81e-04  tok/s 158944
+[nanogym] eval   35250/60000  train 0.2511  val 0.8608  gap +0.6097
+[nanogym] step  35300/60000  loss 0.3538  bpc 0.510  lr 1.80e-04  tok/s 221805
+[nanogym] step  35400/60000  loss 0.3433  bpc 0.495  lr 1.79e-04  tok/s 216546
+[nanogym] step  35500/60000  loss 0.3313  bpc 0.478  lr 1.79e-04  tok/s 222308
+[nanogym] eval   35500/60000  train 0.2495  val 0.8689  gap +0.6194
+[nanogym] step  35600/60000  loss 0.3426  bpc 0.494  lr 1.78e-04  tok/s 226667
+[nanogym] step  35700/60000  loss 0.3320  bpc 0.479  lr 1.77e-04  tok/s 191877
+[nanogym] eval   35750/60000  train 0.2453  val 0.8760  gap +0.6307
+[nanogym] step  35800/60000  loss 0.3539  bpc 0.511  lr 1.76e-04  tok/s 193371
+[nanogym] step  35900/60000  loss 0.3330  bpc 0.480  lr 1.75e-04  tok/s 175634
+[nanogym] step  36000/60000  loss 0.3359  bpc 0.485  lr 1.74e-04  tok/s 225936
+[nanogym] eval   36000/60000  train 0.2453  val 0.8930  gap +0.6478
+[nanogym] step  36100/60000  loss 0.3189  bpc 0.460  lr 1.73e-04  tok/s 210382
+[nanogym] step  36200/60000  loss 0.3452  bpc 0.498  lr 1.72e-04  tok/s 216606
+[nanogym] eval   36250/60000  train 0.2421  val 0.8753  gap +0.6331
+[nanogym] step  36300/60000  loss 0.3438  bpc 0.496  lr 1.71e-04  tok/s 180824
+[nanogym] step  36400/60000  loss 0.3461  bpc 0.499  lr 1.70e-04  tok/s 220355
+[nanogym] step  36500/60000  loss 0.3193  bpc 0.461  lr 1.69e-04  tok/s 199897
+[nanogym] eval   36500/60000  train 0.2424  val 0.8792  gap +0.6368
+[nanogym] step  36600/60000  loss 0.3230  bpc 0.466  lr 1.68e-04  tok/s 225836
+[nanogym] step  36700/60000  loss 0.3311  bpc 0.478  lr 1.67e-04  tok/s 214872
+[nanogym] eval   36750/60000  train 0.2387  val 0.8821  gap +0.6434
+[nanogym] step  36800/60000  loss 0.3083  bpc 0.445  lr 1.66e-04  tok/s 202552
+[nanogym] step  36900/60000  loss 0.3174  bpc 0.458  lr 1.65e-04  tok/s 221845
+[nanogym] step  37000/60000  loss 0.3453  bpc 0.498  lr 1.64e-04  tok/s 208329
+[nanogym] eval   37000/60000  train 0.2408  val 0.8861  gap +0.6453
+[nanogym] step  37100/60000  loss 0.3094  bpc 0.446  lr 1.63e-04  tok/s 215979
+[nanogym] step  37200/60000  loss 0.3452  bpc 0.498  lr 1.63e-04  tok/s 220890
+[nanogym] eval   37250/60000  train 0.2379  val 0.8862  gap +0.6483
+[nanogym] step  37300/60000  loss 0.3125  bpc 0.451  lr 1.62e-04  tok/s 183605
+[nanogym] step  37400/60000  loss 0.3351  bpc 0.484  lr 1.61e-04  tok/s 224547
+[nanogym] step  37500/60000  loss 0.3029  bpc 0.437  lr 1.60e-04  tok/s 226186
+[nanogym] eval   37500/60000  train 0.2329  val 0.8780  gap +0.6451
+[nanogym] step  37600/60000  loss 0.3250  bpc 0.469  lr 1.59e-04  tok/s 231380
+[nanogym] step  37700/60000  loss 0.3331  bpc 0.481  lr 1.58e-04  tok/s 209401
+[nanogym] eval   37750/60000  train 0.2330  val 0.9050  gap +0.6720
+[nanogym] step  37800/60000  loss 0.3242  bpc 0.468  lr 1.57e-04  tok/s 215594
+[nanogym] step  37900/60000  loss 0.3238  bpc 0.467  lr 1.56e-04  tok/s 196674
+[nanogym] step  38000/60000  loss 0.3110  bpc 0.449  lr 1.55e-04  tok/s 200812
+[nanogym] eval   38000/60000  train 0.2331  val 0.8838  gap +0.6507
+[nanogym] step  38100/60000  loss 0.3021  bpc 0.436  lr 1.54e-04  tok/s 208492
+[nanogym] step  38200/60000  loss 0.3107  bpc 0.448  lr 1.53e-04  tok/s 217072
+[nanogym] eval   38250/60000  train 0.2321  val 0.8817  gap +0.6496
+[nanogym] step  38300/60000  loss 0.2877  bpc 0.415  lr 1.52e-04  tok/s 205318
+[nanogym] step  38400/60000  loss 0.3155  bpc 0.455  lr 1.52e-04  tok/s 140367
+[nanogym] step  38500/60000  loss 0.3279  bpc 0.473  lr 1.51e-04  tok/s 202392
+[nanogym] eval   38500/60000  train 0.2284  val 0.9002  gap +0.6718
+[nanogym] step  38600/60000  loss 0.3034  bpc 0.438  lr 1.50e-04  tok/s 211574
+[nanogym] step  38700/60000  loss 0.3319  bpc 0.479  lr 1.49e-04  tok/s 216801
+[nanogym] eval   38750/60000  train 0.2269  val 0.8960  gap +0.6690
+[nanogym] step  38800/60000  loss 0.3238  bpc 0.467  lr 1.48e-04  tok/s 169092
+[nanogym] step  38900/60000  loss 0.3190  bpc 0.460  lr 1.47e-04  tok/s 178881
+[nanogym] step  39000/60000  loss 0.3098  bpc 0.447  lr 1.46e-04  tok/s 215644
+[nanogym] eval   39000/60000  train 0.2249  val 0.8897  gap +0.6648
+[nanogym] step  39100/60000  loss 0.3107  bpc 0.448  lr 1.45e-04  tok/s 223147
+[nanogym] step  39200/60000  loss 0.2948  bpc 0.425  lr 1.44e-04  tok/s 208375
+[nanogym] eval   39250/60000  train 0.2261  val 0.8942  gap +0.6681
+[nanogym] step  39300/60000  loss 0.3062  bpc 0.442  lr 1.44e-04  tok/s 218168
+[nanogym] step  39400/60000  loss 0.3043  bpc 0.439  lr 1.43e-04  tok/s 204077
+[nanogym] step  39500/60000  loss 0.3027  bpc 0.437  lr 1.42e-04  tok/s 225600
+[nanogym] eval   39500/60000  train 0.2215  val 0.9116  gap +0.6901
+[nanogym] step  39600/60000  loss 0.3122  bpc 0.450  lr 1.41e-04  tok/s 188126
+[nanogym] step  39700/60000  loss 0.3180  bpc 0.459  lr 1.40e-04  tok/s 218200
+[nanogym] eval   39750/60000  train 0.2235  val 0.8934  gap +0.6699
+[nanogym] step  39800/60000  loss 0.3101  bpc 0.447  lr 1.39e-04  tok/s 218801
+[nanogym] step  39900/60000  loss 0.3086  bpc 0.445  lr 1.38e-04  tok/s 221138
+[nanogym] step  40000/60000  loss 0.3097  bpc 0.447  lr 1.37e-04  tok/s 232930
+[nanogym] eval   40000/60000  train 0.2178  val 0.9069  gap +0.6892
+[nanogym] step  40100/60000  loss 0.2911  bpc 0.420  lr 1.37e-04  tok/s 186570
+[nanogym] step  40200/60000  loss 0.2885  bpc 0.416  lr 1.36e-04  tok/s 221575
+[nanogym] eval   40250/60000  train 0.2156  val 0.9186  gap +0.7030
+[nanogym] step  40300/60000  loss 0.3052  bpc 0.440  lr 1.35e-04  tok/s 231878
+[nanogym] step  40400/60000  loss 0.3043  bpc 0.439  lr 1.34e-04  tok/s 204445
+[nanogym] step  40500/60000  loss 0.2925  bpc 0.422  lr 1.33e-04  tok/s 190733
+[nanogym] eval   40500/60000  train 0.2140  val 0.9106  gap +0.6965
+[nanogym] step  40600/60000  loss 0.3012  bpc 0.435  lr 1.32e-04  tok/s 228178
+[nanogym] step  40700/60000  loss 0.2837  bpc 0.409  lr 1.31e-04  tok/s 219565
+[nanogym] eval   40750/60000  train 0.2152  val 0.9241  gap +0.7090
+[nanogym] step  40800/60000  loss 0.3124  bpc 0.451  lr 1.31e-04  tok/s 217984
+[nanogym] step  40900/60000  loss 0.2976  bpc 0.429  lr 1.30e-04  tok/s 221796
+[nanogym] step  41000/60000  loss 0.3072  bpc 0.443  lr 1.29e-04  tok/s 224322
+[nanogym] eval   41000/60000  train 0.2141  val 0.9172  gap +0.7031
+[nanogym] step  41100/60000  loss 0.3001  bpc 0.433  lr 1.28e-04  tok/s 156703
+[nanogym] step  41200/60000  loss 0.2948  bpc 0.425  lr 1.27e-04  tok/s 215349
+[nanogym] eval   41250/60000  train 0.2117  val 0.8957  gap +0.6840
+[nanogym] step  41300/60000  loss 0.2887  bpc 0.417  lr 1.26e-04  tok/s 221635
+[nanogym] step  41400/60000  loss 0.2924  bpc 0.422  lr 1.26e-04  tok/s 226809
+[nanogym] step  41500/60000  loss 0.2874  bpc 0.415  lr 1.25e-04  tok/s 188791
+[nanogym] eval   41500/60000  train 0.2115  val 0.9127  gap +0.7012
+[nanogym] step  41600/60000  loss 0.3024  bpc 0.436  lr 1.24e-04  tok/s 230981
+[nanogym] step  41700/60000  loss 0.2941  bpc 0.424  lr 1.23e-04  tok/s 213447
+[nanogym] eval   41750/60000  train 0.2085  val 0.9256  gap +0.7171
+[nanogym] step  41800/60000  loss 0.2943  bpc 0.425  lr 1.22e-04  tok/s 191479
+[nanogym] step  41900/60000  loss 0.2840  bpc 0.410  lr 1.21e-04  tok/s 233225
+[nanogym] step  42000/60000  loss 0.2825  bpc 0.408  lr 1.21e-04  tok/s 223936
+[nanogym] eval   42000/60000  train 0.2052  val 0.9484  gap +0.7432
+[nanogym] step  42100/60000  loss 0.2816  bpc 0.406  lr 1.20e-04  tok/s 224996
+[nanogym] step  42200/60000  loss 0.2878  bpc 0.415  lr 1.19e-04  tok/s 201860
+[nanogym] eval   42250/60000  train 0.2059  val 0.9313  gap +0.7254
+[nanogym] step  42300/60000  loss 0.3023  bpc 0.436  lr 1.18e-04  tok/s 230167
+[nanogym] step  42400/60000  loss 0.2969  bpc 0.428  lr 1.17e-04  tok/s 210025
+[nanogym] step  42500/60000  loss 0.2865  bpc 0.413  lr 1.17e-04  tok/s 212564
+[nanogym] eval   42500/60000  train 0.2072  val 0.9284  gap +0.7212
+[nanogym] step  42600/60000  loss 0.3044  bpc 0.439  lr 1.16e-04  tok/s 179121
+[nanogym] step  42700/60000  loss 0.2839  bpc 0.410  lr 1.15e-04  tok/s 201738
+[nanogym] eval   42750/60000  train 0.2046  val 0.9213  gap +0.7167
+[nanogym] step  42800/60000  loss 0.2937  bpc 0.424  lr 1.14e-04  tok/s 198319
+[nanogym] step  42900/60000  loss 0.2856  bpc 0.412  lr 1.14e-04  tok/s 158209
+[nanogym] step  43000/60000  loss 0.2930  bpc 0.423  lr 1.13e-04  tok/s 191242
+[nanogym] eval   43000/60000  train 0.2004  val 0.9244  gap +0.7239
+[nanogym] step  43100/60000  loss 0.2905  bpc 0.419  lr 1.12e-04  tok/s 227357
+[nanogym] step  43200/60000  loss 0.2826  bpc 0.408  lr 1.11e-04  tok/s 226668
+[nanogym] eval   43250/60000  train 0.2025  val 0.9398  gap +0.7373
+[nanogym] step  43300/60000  loss 0.2984  bpc 0.430  lr 1.10e-04  tok/s 223344
+[nanogym] step  43400/60000  loss 0.2822  bpc 0.407  lr 1.10e-04  tok/s 209954
+[nanogym] step  43500/60000  loss 0.2911  bpc 0.420  lr 1.09e-04  tok/s 220727
+[nanogym] eval   43500/60000  train 0.2001  val 0.9460  gap +0.7458
+[nanogym] step  43600/60000  loss 0.2810  bpc 0.405  lr 1.08e-04  tok/s 228155
+[nanogym] step  43700/60000  loss 0.2982  bpc 0.430  lr 1.07e-04  tok/s 213805
+[nanogym] eval   43750/60000  train 0.1983  val 0.9321  gap +0.7338
+[nanogym] step  43800/60000  loss 0.2862  bpc 0.413  lr 1.07e-04  tok/s 216504
+[nanogym] step  43900/60000  loss 0.2634  bpc 0.380  lr 1.06e-04  tok/s 221812
+[nanogym] step  44000/60000  loss 0.2623  bpc 0.378  lr 1.05e-04  tok/s 231795
+[nanogym] eval   44000/60000  train 0.2000  val 0.9365  gap +0.7366
+[nanogym] step  44100/60000  loss 0.2911  bpc 0.420  lr 1.04e-04  tok/s 221031
+[nanogym] step  44200/60000  loss 0.2940  bpc 0.424  lr 1.04e-04  tok/s 224198
+[nanogym] eval   44250/60000  train 0.1965  val 0.9455  gap +0.7490
+[nanogym] step  44300/60000  loss 0.3047  bpc 0.440  lr 1.03e-04  tok/s 179900
+[nanogym] step  44400/60000  loss 0.2760  bpc 0.398  lr 1.02e-04  tok/s 221432
+[nanogym] step  44500/60000  loss 0.2974  bpc 0.429  lr 1.02e-04  tok/s 225258
+[nanogym] eval   44500/60000  train 0.1936  val 0.9368  gap +0.7431
+[nanogym] step  44600/60000  loss 0.2863  bpc 0.413  lr 1.01e-04  tok/s 226867
+[nanogym] step  44700/60000  loss 0.2831  bpc 0.408  lr 1.00e-04  tok/s 220350
+[nanogym] eval   44750/60000  train 0.1911  val 0.9565  gap +0.7654
+[nanogym] step  44800/60000  loss 0.2848  bpc 0.411  lr 9.94e-05  tok/s 202761
+[nanogym] step  44900/60000  loss 0.2770  bpc 0.400  lr 9.87e-05  tok/s 227630
+[nanogym] step  45000/60000  loss 0.2975  bpc 0.429  lr 9.79e-05  tok/s 135490
+[nanogym] eval   45000/60000  train 0.1938  val 0.9443  gap +0.7505
+[nanogym] step  45100/60000  loss 0.2889  bpc 0.417  lr 9.72e-05  tok/s 200357
+[nanogym] step  45200/60000  loss 0.2731  bpc 0.394  lr 9.65e-05  tok/s 118672
+[nanogym] eval   45250/60000  train 0.1920  val 0.9598  gap +0.7678
+[nanogym] step  45300/60000  loss 0.2755  bpc 0.397  lr 9.58e-05  tok/s 216790
+[nanogym] step  45400/60000  loss 0.2724  bpc 0.393  lr 9.52e-05  tok/s 221169
+[nanogym] step  45500/60000  loss 0.2988  bpc 0.431  lr 9.45e-05  tok/s 209175
+[nanogym] eval   45500/60000  train 0.1889  val 0.9568  gap +0.7679
+[nanogym] step  45600/60000  loss 0.2861  bpc 0.413  lr 9.38e-05  tok/s 227193
+[nanogym] step  45700/60000  loss 0.2770  bpc 0.400  lr 9.31e-05  tok/s 221753
+[nanogym] eval   45750/60000  train 0.1886  val 0.9542  gap +0.7656
+[nanogym] step  45800/60000  loss 0.2879  bpc 0.415  lr 9.24e-05  tok/s 160470
+[nanogym] step  45900/60000  loss 0.2595  bpc 0.374  lr 9.17e-05  tok/s 193255
+[nanogym] step  46000/60000  loss 0.2990  bpc 0.431  lr 9.11e-05  tok/s 216734
+[nanogym] eval   46000/60000  train 0.1882  val 0.9479  gap +0.7597
+[nanogym] step  46100/60000  loss 0.2919  bpc 0.421  lr 9.04e-05  tok/s 227580
+[nanogym] step  46200/60000  loss 0.2957  bpc 0.427  lr 8.98e-05  tok/s 193997
+[nanogym] eval   46250/60000  train 0.1874  val 0.9869  gap +0.7995
+[nanogym] step  46300/60000  loss 0.2693  bpc 0.388  lr 8.91e-05  tok/s 186520
+[nanogym] step  46400/60000  loss 0.2691  bpc 0.388  lr 8.84e-05  tok/s 150186
+[nanogym] step  46500/60000  loss 0.2797  bpc 0.403  lr 8.78e-05  tok/s 221880
+[nanogym] eval   46500/60000  train 0.1869  val 0.9722  gap +0.7853
+[nanogym] step  46600/60000  loss 0.2796  bpc 0.403  lr 8.71e-05  tok/s 224061
+[nanogym] step  46700/60000  loss 0.2763  bpc 0.399  lr 8.65e-05  tok/s 171553
+[nanogym] eval   46750/60000  train 0.1847  val 0.9711  gap +0.7863
+[nanogym] step  46800/60000  loss 0.2639  bpc 0.381  lr 8.59e-05  tok/s 219932
+[nanogym] step  46900/60000  loss 0.2646  bpc 0.382  lr 8.52e-05  tok/s 224146
+[nanogym] step  47000/60000  loss 0.2749  bpc 0.397  lr 8.46e-05  tok/s 218814
+[nanogym] eval   47000/60000  train 0.1809  val 0.9747  gap +0.7938
+[nanogym] step  47100/60000  loss 0.2621  bpc 0.378  lr 8.40e-05  tok/s 224303
+[nanogym] step  47200/60000  loss 0.2719  bpc 0.392  lr 8.33e-05  tok/s 226340
+[nanogym] eval   47250/60000  train 0.1805  val 0.9731  gap +0.7927
+[nanogym] step  47300/60000  loss 0.2855  bpc 0.412  lr 8.27e-05  tok/s 189163
+[nanogym] step  47400/60000  loss 0.2668  bpc 0.385  lr 8.21e-05  tok/s 191335
+[nanogym] step  47500/60000  loss 0.2619  bpc 0.378  lr 8.15e-05  tok/s 172965
+[nanogym] eval   47500/60000  train 0.1796  val 0.9741  gap +0.7946
+[nanogym] step  47600/60000  loss 0.2750  bpc 0.397  lr 8.09e-05  tok/s 214435
+[nanogym] step  47700/60000  loss 0.2714  bpc 0.392  lr 8.03e-05  tok/s 229906
+[nanogym] eval   47750/60000  train 0.1801  val 0.9793  gap +0.7992
+[nanogym] step  47800/60000  loss 0.2551  bpc 0.368  lr 7.97e-05  tok/s 216433
+[nanogym] step  47900/60000  loss 0.2626  bpc 0.379  lr 7.91e-05  tok/s 212390
+[nanogym] step  48000/60000  loss 0.2746  bpc 0.396  lr 7.85e-05  tok/s 170789
+[nanogym] eval   48000/60000  train 0.1762  val 0.9831  gap +0.8070
+[nanogym] step  48100/60000  loss 0.2724  bpc 0.393  lr 7.79e-05  tok/s 199711
+[nanogym] step  48200/60000  loss 0.2522  bpc 0.364  lr 7.74e-05  tok/s 191815
+[nanogym] eval   48250/60000  train 0.1788  val 1.0025  gap +0.8237
+[nanogym] step  48300/60000  loss 0.2635  bpc 0.380  lr 7.68e-05  tok/s 228410
+[nanogym] step  48400/60000  loss 0.2656  bpc 0.383  lr 7.62e-05  tok/s 218033
+[nanogym] step  48500/60000  loss 0.2684  bpc 0.387  lr 7.56e-05  tok/s 227624
+[nanogym] eval   48500/60000  train 0.1740  val 0.9782  gap +0.8043
+[nanogym] step  48600/60000  loss 0.2608  bpc 0.376  lr 7.51e-05  tok/s 226863
+[nanogym] step  48700/60000  loss 0.2716  bpc 0.392  lr 7.45e-05  tok/s 218959
+[nanogym] eval   48750/60000  train 0.1735  val 0.9868  gap +0.8133
+[nanogym] step  48800/60000  loss 0.2607  bpc 0.376  lr 7.40e-05  tok/s 182340
+[nanogym] step  48900/60000  loss 0.2669  bpc 0.385  lr 7.34e-05  tok/s 209148
+[nanogym] step  49000/60000  loss 0.2836  bpc 0.409  lr 7.29e-05  tok/s 225941
+[nanogym] eval   49000/60000  train 0.1767  val 0.9818  gap +0.8051
+[nanogym] step  49100/60000  loss 0.2623  bpc 0.378  lr 7.23e-05  tok/s 221577
+[nanogym] step  49200/60000  loss 0.2442  bpc 0.352  lr 7.18e-05  tok/s 201453
+[nanogym] eval   49250/60000  train 0.1742  val 0.9769  gap +0.8027
+[nanogym] step  49300/60000  loss 0.2618  bpc 0.378  lr 7.13e-05  tok/s 223968
+[nanogym] step  49400/60000  loss 0.2824  bpc 0.407  lr 7.07e-05  tok/s 229301
+[nanogym] step  49500/60000  loss 0.2606  bpc 0.376  lr 7.02e-05  tok/s 212480
+[nanogym] eval   49500/60000  train 0.1745  val 0.9901  gap +0.8156
+[nanogym] step  49600/60000  loss 0.2649  bpc 0.382  lr 6.97e-05  tok/s 225009
+[nanogym] step  49700/60000  loss 0.2553  bpc 0.368  lr 6.92e-05  tok/s 225649
+[nanogym] eval   49750/60000  train 0.1714  val 0.9759  gap +0.8045
+[nanogym] step  49800/60000  loss 0.2558  bpc 0.369  lr 6.87e-05  tok/s 197155
+[nanogym] step  49900/60000  loss 0.2867  bpc 0.414  lr 6.82e-05  tok/s 148827
+[nanogym] step  50000/60000  loss 0.2547  bpc 0.367  lr 6.77e-05  tok/s 231721
+[nanogym] eval   50000/60000  train 0.1680  val 0.9948  gap +0.8267
+[nanogym] step  50100/60000  loss 0.2660  bpc 0.384  lr 6.72e-05  tok/s 201785
+[nanogym] step  50200/60000  loss 0.2626  bpc 0.379  lr 6.67e-05  tok/s 166213
+[nanogym] eval   50250/60000  train 0.1699  val 0.9984  gap +0.8285
+[nanogym] step  50300/60000  loss 0.2589  bpc 0.374  lr 6.62e-05  tok/s 209168
+[nanogym] step  50400/60000  loss 0.2591  bpc 0.374  lr 6.57e-05  tok/s 222427
+[nanogym] step  50500/60000  loss 0.2539  bpc 0.366  lr 6.52e-05  tok/s 175334
+[nanogym] eval   50500/60000  train 0.1704  val 0.9984  gap +0.8280
+[nanogym] step  50600/60000  loss 0.2552  bpc 0.368  lr 6.47e-05  tok/s 198381
+[nanogym] step  50700/60000  loss 0.2661  bpc 0.384  lr 6.43e-05  tok/s 230496
+[nanogym] eval   50750/60000  train 0.1702  val 0.9971  gap +0.8269
+[nanogym] step  50800/60000  loss 0.2593  bpc 0.374  lr 6.38e-05  tok/s 188881
+[nanogym] step  50900/60000  loss 0.2479  bpc 0.358  lr 6.33e-05  tok/s 230173
+[nanogym] step  51000/60000  loss 0.2530  bpc 0.365  lr 6.29e-05  tok/s 226747
+[nanogym] eval   51000/60000  train 0.1682  val 1.0050  gap +0.8367
+[nanogym] step  51100/60000  loss 0.2533  bpc 0.365  lr 6.24e-05  tok/s 229313
+[nanogym] step  51200/60000  loss 0.2450  bpc 0.354  lr 6.20e-05  tok/s 212456
+[nanogym] eval   51250/60000  train 0.1685  val 1.0221  gap +0.8536
+[nanogym] step  51300/60000  loss 0.2556  bpc 0.369  lr 6.16e-05  tok/s 219600
+[nanogym] step  51400/60000  loss 0.2621  bpc 0.378  lr 6.11e-05  tok/s 223197
+[nanogym] step  51500/60000  loss 0.2328  bpc 0.336  lr 6.07e-05  tok/s 201127
+[nanogym] eval   51500/60000  train 0.1656  val 1.0009  gap +0.8353
+[nanogym] step  51600/60000  loss 0.2475  bpc 0.357  lr 6.03e-05  tok/s 228799
+[nanogym] step  51700/60000  loss 0.2639  bpc 0.381  lr 5.98e-05  tok/s 155294
+[nanogym] eval   51750/60000  train 0.1651  val 1.0081  gap +0.8430
+[nanogym] step  51800/60000  loss 0.2701  bpc 0.390  lr 5.94e-05  tok/s 191585
+[nanogym] step  51900/60000  loss 0.2491  bpc 0.359  lr 5.90e-05  tok/s 211697
+[nanogym] step  52000/60000  loss 0.2357  bpc 0.340  lr 5.86e-05  tok/s 222226
+[nanogym] eval   52000/60000  train 0.1638  val 1.0352  gap +0.8714
+[nanogym] step  52100/60000  loss 0.2427  bpc 0.350  lr 5.82e-05  tok/s 198776
+[nanogym] step  52200/60000  loss 0.2624  bpc 0.378  lr 5.78e-05  tok/s 188392
+[nanogym] eval   52250/60000  train 0.1640  val 1.0000  gap +0.8360
+[nanogym] step  52300/60000  loss 0.2500  bpc 0.361  lr 5.74e-05  tok/s 223627
+[nanogym] step  52400/60000  loss 0.2412  bpc 0.348  lr 5.70e-05  tok/s 210556
+[nanogym] step  52500/60000  loss 0.2447  bpc 0.353  lr 5.66e-05  tok/s 193925
+[nanogym] eval   52500/60000  train 0.1645  val 1.0206  gap +0.8561
+[nanogym] step  52600/60000  loss 0.2410  bpc 0.348  lr 5.62e-05  tok/s 228861
+[nanogym] step  52700/60000  loss 0.2408  bpc 0.347  lr 5.59e-05  tok/s 229711
+[nanogym] eval   52750/60000  train 0.1631  val 1.0219  gap +0.8589
+[nanogym] step  52800/60000  loss 0.2695  bpc 0.389  lr 5.55e-05  tok/s 196565
+[nanogym] step  52900/60000  loss 0.2529  bpc 0.365  lr 5.51e-05  tok/s 225650
+[nanogym] step  53000/60000  loss 0.2474  bpc 0.357  lr 5.48e-05  tok/s 206592
+[nanogym] eval   53000/60000  train 0.1623  val 0.9986  gap +0.8363
+[nanogym] step  53100/60000  loss 0.2641  bpc 0.381  lr 5.44e-05  tok/s 197512
+[nanogym] step  53200/60000  loss 0.2329  bpc 0.336  lr 5.41e-05  tok/s 186906
+[nanogym] eval   53250/60000  train 0.1601  val 1.0126  gap +0.8524
+[nanogym] step  53300/60000  loss 0.2449  bpc 0.353  lr 5.37e-05  tok/s 223884
+[nanogym] step  53400/60000  loss 0.2340  bpc 0.338  lr 5.34e-05  tok/s 219841
+[nanogym] step  53500/60000  loss 0.2339  bpc 0.337  lr 5.30e-05  tok/s 186650
+[nanogym] eval   53500/60000  train 0.1608  val 1.0144  gap +0.8536
+[nanogym] step  53600/60000  loss 0.2385  bpc 0.344  lr 5.27e-05  tok/s 226088
+[nanogym] step  53700/60000  loss 0.2478  bpc 0.357  lr 5.24e-05  tok/s 219665
+[nanogym] eval   53750/60000  train 0.1591  val 1.0299  gap +0.8708
+[nanogym] step  53800/60000  loss 0.2566  bpc 0.370  lr 5.21e-05  tok/s 226407
+[nanogym] step  53900/60000  loss 0.2466  bpc 0.356  lr 5.17e-05  tok/s 202549
+[nanogym] step  54000/60000  loss 0.2473  bpc 0.357  lr 5.14e-05  tok/s 203832
+[nanogym] eval   54000/60000  train 0.1589  val 1.0299  gap +0.8710
+[nanogym] step  54100/60000  loss 0.2234  bpc 0.322  lr 5.11e-05  tok/s 61463
+[nanogym] step  54200/60000  loss 0.2560  bpc 0.369  lr 5.08e-05  tok/s 232459
+[nanogym] eval   54250/60000  train 0.1580  val 1.0015  gap +0.8435
+[nanogym] step  54300/60000  loss 0.2377  bpc 0.343  lr 5.05e-05  tok/s 226931
+[nanogym] step  54400/60000  loss 0.2439  bpc 0.352  lr 5.02e-05  tok/s 226505
+[nanogym] step  54500/60000  loss 0.2327  bpc 0.336  lr 5.00e-05  tok/s 227726
+[nanogym] eval   54500/60000  train 0.1562  val 1.0319  gap +0.8757
+[nanogym] step  54600/60000  loss 0.2662  bpc 0.384  lr 4.97e-05  tok/s 204082
+[nanogym] step  54700/60000  loss 0.2489  bpc 0.359  lr 4.94e-05  tok/s 200148
+[nanogym] eval   54750/60000  train 0.1570  val 1.0450  gap +0.8879
+[nanogym] step  54800/60000  loss 0.2476  bpc 0.357  lr 4.91e-05  tok/s 204897
+[nanogym] step  54900/60000  loss 0.2712  bpc 0.391  lr 4.89e-05  tok/s 201963
+[nanogym] step  55000/60000  loss 0.2421  bpc 0.349  lr 4.86e-05  tok/s 231177
+[nanogym] eval   55000/60000  train 0.1568  val 1.0126  gap +0.8558
+[nanogym] step  55100/60000  loss 0.2555  bpc 0.369  lr 4.83e-05  tok/s 205708
+[nanogym] step  55200/60000  loss 0.2509  bpc 0.362  lr 4.81e-05  tok/s 223444
+[nanogym] eval   55250/60000  train 0.1569  val 1.0378  gap +0.8810
+[nanogym] step  55300/60000  loss 0.2330  bpc 0.336  lr 4.78e-05  tok/s 225351
+[nanogym] step  55400/60000  loss 0.2493  bpc 0.360  lr 4.76e-05  tok/s 186453
+[nanogym] step  55500/60000  loss 0.2514  bpc 0.363  lr 4.74e-05  tok/s 205584
+[nanogym] eval   55500/60000  train 0.1563  val 1.0241  gap +0.8679
+[nanogym] step  55600/60000  loss 0.2403  bpc 0.347  lr 4.71e-05  tok/s 221602
+[nanogym] step  55700/60000  loss 0.2321  bpc 0.335  lr 4.69e-05  tok/s 161754
+[nanogym] eval   55750/60000  train 0.1571  val 1.0169  gap +0.8598
+[nanogym] step  55800/60000  loss 0.2463  bpc 0.355  lr 4.67e-05  tok/s 184988
+[nanogym] step  55900/60000  loss 0.2407  bpc 0.347  lr 4.65e-05  tok/s 221697
+[nanogym] step  56000/60000  loss 0.2420  bpc 0.349  lr 4.63e-05  tok/s 225618
+[nanogym] eval   56000/60000  train 0.1545  val 1.0328  gap +0.8783
+[nanogym] step  56100/60000  loss 0.2472  bpc 0.357  lr 4.61e-05  tok/s 162720
+[nanogym] step  56200/60000  loss 0.2409  bpc 0.348  lr 4.59e-05  tok/s 197015
+[nanogym] eval   56250/60000  train 0.1537  val 1.0522  gap +0.8986
+[nanogym] step  56300/60000  loss 0.2449  bpc 0.353  lr 4.57e-05  tok/s 217938
+[nanogym] step  56400/60000  loss 0.2347  bpc 0.339  lr 4.55e-05  tok/s 230068
+[nanogym] step  56500/60000  loss 0.2436  bpc 0.351  lr 4.53e-05  tok/s 208598
+[nanogym] eval   56500/60000  train 0.1539  val 1.0339  gap +0.8800
+[nanogym] step  56600/60000  loss 0.2473  bpc 0.357  lr 4.51e-05  tok/s 228642
+[nanogym] step  56700/60000  loss 0.2276  bpc 0.328  lr 4.49e-05  tok/s 205631
+[nanogym] eval   56750/60000  train 0.1538  val 1.0358  gap +0.8820
+[nanogym] step  56800/60000  loss 0.2452  bpc 0.354  lr 4.48e-05  tok/s 217724
+[nanogym] step  56900/60000  loss 0.2326  bpc 0.336  lr 4.46e-05  tok/s 225294
+[nanogym] step  57000/60000  loss 0.2360  bpc 0.340  lr 4.44e-05  tok/s 187262
+[nanogym] eval   57000/60000  train 0.1512  val 1.0432  gap +0.8920
+[nanogym] step  57100/60000  loss 0.2369  bpc 0.342  lr 4.43e-05  tok/s 227635
+[nanogym] step  57200/60000  loss 0.2263  bpc 0.327  lr 4.41e-05  tok/s 190332
+[nanogym] eval   57250/60000  train 0.1505  val 1.0446  gap +0.8941
+[nanogym] step  57300/60000  loss 0.2408  bpc 0.347  lr 4.40e-05  tok/s 211820
+[nanogym] step  57400/60000  loss 0.2374  bpc 0.342  lr 4.39e-05  tok/s 210646
+[nanogym] step  57500/60000  loss 0.2433  bpc 0.351  lr 4.37e-05  tok/s 217934
+[nanogym] eval   57500/60000  train 0.1506  val 1.0504  gap +0.8998
+[nanogym] step  57600/60000  loss 0.2431  bpc 0.351  lr 4.36e-05  tok/s 194699
+[nanogym] step  57700/60000  loss 0.2480  bpc 0.358  lr 4.35e-05  tok/s 210581
+[nanogym] eval   57750/60000  train 0.1518  val 1.0647  gap +0.9129
+[nanogym] step  57800/60000  loss 0.2432  bpc 0.351  lr 4.34e-05  tok/s 214426
+[nanogym] step  57900/60000  loss 0.2504  bpc 0.361  lr 4.33e-05  tok/s 199885
+[nanogym] step  58000/60000  loss 0.2448  bpc 0.353  lr 4.31e-05  tok/s 230514
+[nanogym] eval   58000/60000  train 0.1495  val 1.0506  gap +0.9011
+[nanogym] step  58100/60000  loss 0.2394  bpc 0.345  lr 4.30e-05  tok/s 219251
+[nanogym] step  58200/60000  loss 0.2321  bpc 0.335  lr 4.29e-05  tok/s 199662
+[nanogym] eval   58250/60000  train 0.1498  val 1.0393  gap +0.8895
+[nanogym] step  58300/60000  loss 0.2383  bpc 0.344  lr 4.29e-05  tok/s 221285
+[nanogym] step  58400/60000  loss 0.2179  bpc 0.314  lr 4.28e-05  tok/s 222633
+[nanogym] step  58500/60000  loss 0.2257  bpc 0.326  lr 4.27e-05  tok/s 218516
+[nanogym] eval   58500/60000  train 0.1496  val 1.0534  gap +0.9038
+[nanogym] step  58600/60000  loss 0.2358  bpc 0.340  lr 4.26e-05  tok/s 224023
+[nanogym] step  58700/60000  loss 0.2356  bpc 0.340  lr 4.25e-05  tok/s 207980
+[nanogym] eval   58750/60000  train 0.1487  val 1.0594  gap +0.9107
+[nanogym] step  58800/60000  loss 0.2323  bpc 0.335  lr 4.25e-05  tok/s 212313
+[nanogym] step  58900/60000  loss 0.2244  bpc 0.324  lr 4.24e-05  tok/s 227824
+[nanogym] step  59000/60000  loss 0.2298  bpc 0.331  lr 4.24e-05  tok/s 216285
+[nanogym] eval   59000/60000  train 0.1490  val 1.0455  gap +0.8965
+[nanogym] step  59100/60000  loss 0.2396  bpc 0.346  lr 4.23e-05  tok/s 199558
+[nanogym] step  59200/60000  loss 0.2305  bpc 0.333  lr 4.23e-05  tok/s 208359
+[nanogym] eval   59250/60000  train 0.1463  val 1.0823  gap +0.9360
+[nanogym] step  59300/60000  loss 0.2398  bpc 0.346  lr 4.22e-05  tok/s 226105
+[nanogym] step  59400/60000  loss 0.2340  bpc 0.338  lr 4.22e-05  tok/s 191139
+[nanogym] step  59500/60000  loss 0.2380  bpc 0.343  lr 4.22e-05  tok/s 197330
+[nanogym] eval   59500/60000  train 0.1480  val 1.0425  gap +0.8945
+[nanogym] step  59600/60000  loss 0.2356  bpc 0.340  lr 4.21e-05  tok/s 202714
+[nanogym] step  59700/60000  loss 0.2322  bpc 0.335  lr 4.21e-05  tok/s 224266
+[nanogym] eval   59750/60000  train 0.1483  val 1.0644  gap +0.9162
+[nanogym] step  59800/60000  loss 0.2367  bpc 0.342  lr 4.21e-05  tok/s 209613
+[nanogym] step  59900/60000  loss 0.2416  bpc 0.349  lr 4.21e-05  tok/s 228696
+[nanogym] step  60000/60000  loss 0.2418  bpc 0.349  lr 4.21e-05  tok/s 230723
+[nanogym] eval   60000/60000  train 0.1483  val 1.0539  gap +0.9056

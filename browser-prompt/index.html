@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f0e8" />
+    <title>Prompt / Local Writing Engine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="shell">
+      <div class="toolbar">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span class="theme-label">Dark mode</span>
+        </button>
+      </div>
+
+      <section class="generator" aria-label="Writing prompt generator">
+        <div class="generator-topline">
+          <span class="section-label">CURRENT PROMPT</span>
+        </div>
+
+        <div id="output" class="output" role="textbox" aria-readonly="true" aria-label="Generated writing prompt" data-state="empty"><span id="output-placeholder" class="output-placeholder">Click Generate to begin.</span><span id="output-text" class="output-text"></span><span id="output-cursor" class="output-cursor" aria-hidden="true"></span></div>
+
+        <div class="generator-footer">
+          <p class="local-note"><span id="model-dot" class="hint-dot" title="Loading model" aria-label="Loading model"></span> <span id="model-stats">Loading model…</span></p>
+          <div class="actions">
+            <button id="write" class="write-button" type="button" hidden>Let's write <span aria-hidden="true">↗</span></button>
+            <button id="generate" class="generate-button" type="button" disabled>
+              <span class="button-label">Generate</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>TINY AI PROMPT-WRITER</span>
+      </footer>
+    </main>
+
+    <section id="writing-mode" class="writing-mode" hidden aria-label="Distraction-free writing mode">
+      <div class="writing-shell">
+        <header class="writing-bar">
+          <button id="exit-writing" class="icon-button" type="button" aria-label="Exit writing mode">×</button>
+          <div class="writing-actions">
+            <span class="writing-label">WRITE</span>
+            <button id="save-writing" class="save-button" type="button">Save <span aria-hidden="true">↓</span></button>
+          </div>
+        </header>
+        <p id="writing-prompt" class="writing-prompt"></p>
+        <textarea id="writing-input" class="writing-input" aria-label="Your writing" placeholder="Start writing here…" spellcheck="true"></textarea>
+      </div>
+    </section>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

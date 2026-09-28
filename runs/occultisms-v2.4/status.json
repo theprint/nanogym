@@ -1,0 +1,16 @@
+{
+  "state": "finished",
+  "step": 60000,
+  "max_steps": 60000,
+  "tokens_seen": 491520000,
+  "dataset": "occultisms_29k.txt",
+  "preset": "medium",
+  "device": "cuda",
+  "started_at": 1790417476.0595667,
+  "updated_at": 1790422530.7632897,
+  "best_val_loss": 0.7303755044937134,
+  "parameters": 14340864,
+  "val_loss": 1.0539400577545166,
+  "train_loss": 0.14833573281764983,
+  "finished_at": 1790422530.7622912
+}

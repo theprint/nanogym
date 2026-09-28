@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NanoGym · experiment console</title>
+  <script>
+    // Apply the saved (or OS) theme before first paint to avoid a light/dark flash.
+    (function () { let theme = null; try { theme = localStorage.getItem('nanogym.theme'); } catch (_) {}
+      if (theme !== 'light' && theme !== 'dark') theme = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme; })();
+  </script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">∿</span><strong>NanoGym</strong><span class="brand-tagline">character-level GPT training lab</span></div>
+      <div class="topbar-meta"><span id="compute-chip" class="compute-chip" title="The hardware PyTorch can train on in this environment."><span class="live-dot"></span><span id="compute-label">checking device…</span></span><span id="last-sync" title="When the dashboard last fetched run data from the server (it refreshes every few seconds).">not synced</span><button id="theme-toggle" class="theme-toggle" type="button" title="Switch between light and dark theme"><span class="theme-icon" aria-hidden="true">◐</span><span id="theme-label">dark</span></button></div>
+    </header>
+
+    <main>
+
+      <nav class="tabs" aria-label="Dashboard sections">
+        <button class="tab active" data-tab="training">01 / training</button>
+        <button class="tab" data-tab="samples">02 / samples</button>
+        <button class="tab" data-tab="playground">03 / playground</button>
+        <button class="tab" data-tab="about">04 / about</button>
+      </nav>
+
+      <section id="tab-training" class="tab-panel active">
+        <div class="control-row">
+          <label class="field" title="The run shown in the cards and charts below, and the one the pause/stop/resume buttons act on.">Primary run<select id="primary-run"></select></label>
+          <label class="field compare-field" title="Overlay other runs on the loss and bits-per-character charts. Ctrl-click (Cmd-click on Mac) to select several.">Compare runs<select id="compare-runs" multiple size="1"></select></label>
+          <div class="control-actions"><label class="inline-device" title="Device to use when resuming. &quot;frozen&quot; keeps the device saved in the run&#39;s config.">resume on<select id="resume-device"><option value="">frozen</option><option value="auto">auto</option><option value="cpu">cpu</option><option value="cuda">cuda</option><option value="mps">mps</option></select></label><button id="pause-run" class="button ghost" title="Save a checkpoint after the current step and pause. Resume continues from there.">pause</button><button id="stop-run" class="button ghost" title="Save a checkpoint and end the run. It can still be resumed later.">stop</button><button id="resume-run" class="button primary" title="Continue a paused or stopped run from its latest checkpoint.">resume</button><button id="clone-experiment-button" class="button ghost" title="Open the new-run form pre-filled with this run&#39;s settings, to tweak and launch as a new run.">edit / clone</button><button id="new-experiment-button" class="button accent-soft" title="Open the form to configure and launch a fresh training run.">new experiment</button></div>
+        </div>
+        <div id="control-status" class="control-status hidden"></div>
+        <form id="experiment-form" class="experiment-builder hidden">
+          <div class="builder-heading"><div><p class="eyebrow accent">NEW RUN</p><h2>Start over with a controlled experiment</h2></div><span id="control-note" class="builder-note">Requires <code>serve.py --allow-control</code></span></div>
+          <div class="builder-grid">
+            <label class="field" title="Folder name under runs/. Letters, numbers, dashes and underscores; must not already exist.">Run name<input id="experiment-name" required pattern="[A-Za-z0-9_-]+" placeholder="e.g. notes-small-v1"></label>
+            <label class="field" title="A UTF-8 .txt file from the data/ folder to train on.">Dataset<select id="experiment-dataset" required></select></label>
+            <label class="field" title="Architecture preset: layers, width and attention heads. See the About tab for details.">Model size<select id="experiment-preset"><option value="tiny">tiny · 0.8M · CPU smoke</option><option value="small" selected>small · 4.8M · workhorse</option><option value="medium">medium · 14.3M · best quality</option></select></label>
+            <label class="field" title="How many previous characters the model can see when predicting the next one (block size).">Context chars<input id="experiment-block" type="number" min="16" max="2048" value="256"></label>
+            <label class="field" title="Total optimizer steps before training finishes.">Max steps<input id="experiment-steps" type="number" min="1" value="20000"></label>
+            <label class="field" title="Number of text windows per training step. Larger is smoother but uses more memory.">Batch size<input id="experiment-batch" type="number" min="1" value="64"></label>
+            <label class="field" title="Peak learning rate, reached after warmup and then decayed along a cosine curve.">Learning rate<input id="experiment-lr" type="number" min="0.000001" max="1" step="0.00001" value="0.0003"></label>
+            <label class="field" title="Fraction of activations randomly zeroed during training to reduce overfitting.">Dropout<input id="experiment-dropout" type="number" min="0" max="0.99" step="0.01" value="0.15"></label>
+            <label class="field" title="Share of the dataset held out to measure validation loss (never trained on).">Validation split<input id="experiment-val" type="number" min="0.01" max="0.49" step="0.01" value="0.1"></label>
+            <label class="field" title="Hardware to train on. auto picks CUDA or MPS when available, otherwise CPU.">Device<select id="experiment-device"><option value="auto" selected>auto</option><option value="cpu">cpu</option><option value="cuda">cuda</option><option value="mps">mps</option></select></label>
+            <label class="field" title="Random seed for weight initialization and batch sampling, so runs are reproducible.">Seed<input id="experiment-seed" type="number" min="0" value="1337"></label>
+            <label class="check-field" title="Add any characters in the dataset that are missing from the default character set, instead of mapping them to &lt;unk&gt;."><input id="experiment-extend-vocab" type="checkbox"> extend vocabulary with dataset characters</label>
+          </div>
+          <div class="builder-footer"><span id="experiment-feedback" class="builder-feedback"></span><button type="submit" id="start-experiment" class="button primary">start training ↗</button></div>
+        </form>
+        <div id="empty-state" class="empty-state hidden">No runs yet. Start a training job with <code>python scripts/train.py --config configs/tiny.yaml</code>, then refresh.</div>
+        <div id="activity-banner" class="activity-banner" title="Live status of the primary run, updated every second."><span id="activity-dot" class="activity-dot"></span><div class="activity-copy"><strong id="activity-state">waiting for a run</strong><span id="activity-detail">Select a run to see live training activity.</span></div><time id="activity-time">—</time></div>
+        <details class="activity-log"><summary title="The last lines printed by the training process for this run.">recent trainer output</summary><pre id="activity-log-text">No trainer output yet.</pre></details>
+        <div class="metric-strip">
+          <article class="metric-card" title="Current state of the primary run: running, paused, stopped, finished or failed."><span class="metric-label">state</span><strong id="status-state">—</strong><span id="status-device" class="metric-foot">waiting for a run</span></article>
+          <article class="metric-card" title="Optimizer steps completed out of the run&#39;s max steps."><span class="metric-label">progress</span><strong id="status-step">—</strong><span id="status-progress" class="metric-foot">step / max steps</span></article>
+          <article class="metric-card" title="Lowest loss on held-out validation text so far. The best checkpoint is saved at this point."><span class="metric-label">best val loss</span><strong id="status-loss">—</strong><span class="metric-foot">lower is better</span></article>
+          <article class="metric-card" title="Total characters processed during training (steps × batch size × context length)."><span class="metric-label">tokens seen</span><strong id="status-tokens">—</strong><span class="metric-foot">character throughput</span></article>
+        </div>
+        <div class="chart-grid">
+          <article class="chart-card wide"><div class="chart-header"><div><span class="metric-label">optimization</span><h2 title="Cross-entropy loss on training batches and on held-out validation text. Both should fall; if validation flattens or rises while training keeps falling, the model is overfitting.">Loss over steps</h2></div><label class="inline-control" title="Use a logarithmic y-axis, which makes late-training improvements easier to see."><input id="log-scale" type="checkbox"> log scale</label></div><div class="chart-wrap"><canvas id="loss-chart"></canvas></div></article>
+          <article class="chart-card"><div class="chart-header"><div><span class="metric-label">quality</span><h2 title="Validation loss expressed in bits: roughly how many yes/no guesses the model needs per character. Lower is better.">Bits per character</h2></div><label class="inline-control" title="Exponential moving average smoothing for the loss and bits-per-character curves. 0 shows raw values.">EMA <input id="smoothing" type="range" min="0" max="0.9" step="0.1" value="0.2"><span id="smoothing-value">0.2</span></label></div><div class="chart-wrap"><canvas id="bpc-chart"></canvas></div></article>
+          <article class="chart-card"><div class="chart-header"><div><span class="metric-label">systems</span><h2 title="Throughput (characters per second, top) and gradient norm (bottom), each on its own scale. A spiking gradient norm can mean the learning rate is too high.">Training signals</h2></div></div><div class="chart-wrap split"><div class="chart-sub" title="Characters processed per second. Drops can mean the machine is busy with something else."><canvas id="throughput-chart"></canvas></div><div class="chart-sub" title="Size of the gradient before clipping. Occasional spikes are normal; frequent large spikes suggest the learning rate is too high."><canvas id="gradnorm-chart"></canvas></div></div></article>
+          <article class="chart-card"><div class="chart-header"><div><span class="metric-label">generalization</span><h2 title="Validation loss minus training loss at each evaluation. Near zero means the model generalizes; a gap that keeps growing means it is memorizing the training text. Below zero just means the held-out text is slightly easier than the training text, or is measurement noise.">Train / val gap</h2></div><span class="chart-hint">val − train · above 0 = overfitting</span></div><div class="chart-wrap"><canvas id="gap-chart"></canvas></div></article>
+        </div>
+        <div class="section-foot"><span>Source: append-only <code>metrics.jsonl</code> in each run folder.</span><span id="metric-count">0 metric events</span></div>
+      </section>
+
+      <section id="tab-samples" class="tab-panel">
+        <div class="section-heading"><div><p class="eyebrow accent">QUALITATIVE CHECK</p><h2>Samples timeline</h2></div></div>
+        <div id="samples-intro" class="samples-intro">
+          <span class="metric-label">how to read this page</span>
+          <p>While a run trains, it periodically writes a short sample from the same fixed prompts. Each card below is one of those snapshots, newest first, labelled with the training step it came from. Reading them in order shows the model learning: random noise, then common letter clusters, then real words, and finally grammar and the style of your dataset.</p>
+          <p>This page is optional. It's for watching a run as it trains: if the samples stop improving, or start repeating your training text word for word, the model is overfitting and you can stop the run early. The best checkpoint (lowest validation loss) is kept either way.</p>
+          <p>To actually try out a trained model, use the <button type="button" class="link-button" data-goto-tab="playground">Playground</button>.</p>
+        </div>
+        <div id="samples-list" class="samples-list"><div class="empty-state">Select a run with sample events to browse its writing.</div></div>
+      </section>
+
+      <section id="tab-playground" class="tab-panel">
+        <div class="section-heading"><div><p class="eyebrow accent">INTERACTIVE INFERENCE</p><h2>Playground</h2></div><p>Generate locally from any run that has a checkpoint. The model and vocabulary are loaded from the run itself.</p></div>
+        <div class="playground-grid">
+          <div class="play-controls">
+            <label class="field">Model<select id="play-model"></select></label>
+            <label class="field" title="With &lt;bos&gt;/&lt;eos&gt; honored, a prompt of just &lt;bos&gt; asks the model for a complete entry driven only by the seed. Type after &lt;bos&gt; to steer how the entry begins.">Prompt<textarea id="prompt" rows="5" placeholder="Start a sentence…">&lt;bos&gt;</textarea></label>
+            <div class="slider-grid"><label class="field" title="Controls randomness: lower values pick the most likely characters, higher values take more creative (and error-prone) chances.">Temperature <output id="temperature-value">0.8</output><input id="temperature" type="range" min="0.1" max="1.6" step="0.1" value="0.8"></label><label class="field" title="The most characters to generate; with tags honored, generation can stop earlier at &lt;eos&gt;.">Max chars <output id="max-chars-value">240</output><input id="max-chars" type="range" min="20" max="800" step="10" value="240"></label></div>
+            <div class="slider-grid"><label class="field" title="Only sample from the k most likely next characters (0 turns this filter off).">Top-k <output id="top-k-value">40</output><input id="top-k" type="range" min="0" max="100" step="1" value="40"></label><label class="field" title="Only sample from the smallest set of characters whose probabilities add up to p (1.0 turns this filter off).">Top-p <output id="top-p-value">1.0</output><input id="top-p" type="range" min="0.1" max="1" step="0.05" value="1"></label></div>
+            <label class="field" title="Same seed + same settings gives the same output; change it to get a different result.">Seed <input id="seed" type="number" value="1337"></label>
+            <label class="check-field"><input id="random-seed" type="checkbox"> randomize seed after each generation</label>
+            <label class="check-field" title="Training data marks each entry with &lt;bos&gt; … &lt;eos&gt;. When checked, output starts after &lt;bos&gt; and stops at the first &lt;eos&gt;, and the prompt defaults to &lt;bos&gt; so Generate gives a full entry from the seed alone."><input id="honor-tags" type="checkbox" checked> honor &lt;bos&gt;/&lt;eos&gt; tags <span class="check-hint" aria-hidden="true">ⓘ</span></label>
+            <div class="control-actions"><button id="generate" class="button primary">generate <span>↗</span></button><button id="inspect-attention" class="button ghost">inspect attention</button></div>
+            <div class="export-row"><button id="export-model" type="button" class="button ghost" title="Save the selected model as a standalone web page that runs entirely in the browser. It is written to exports/&lt;run&gt;/ and downloaded as a zip.">export for browser ↓</button><p id="export-status" class="export-status" aria-live="polite"></p></div>
+          </div>
+          <div class="output-card"><div class="output-header"><span class="metric-label">generated text</span><span id="generation-status" class="status-pill">idle</span></div><pre id="generation-output" class="generation-output">Your output will appear here.</pre><div class="confidence-panel"><div class="output-header"><span class="metric-label">character confidence</span><span id="confidence-label">top alternatives from the model</span></div><div id="confidence-bar" class="confidence-bar">Generate text to see per-character confidence.</div></div><div class="attention-panel"><div class="output-header"><span class="metric-label">last-layer attention</span><span id="attention-label">prompt tokens</span></div><div id="attention-heatmap" class="heatmap empty-heatmap">Run “inspect attention” to see what the model is looking at.</div></div></div>
+        </div>
+      </section>
+
+      <section id="tab-about" class="tab-panel">
+        <div class="section-heading"><div><p class="eyebrow accent">ABOUT</p><h2>NanoGym</h2></div></div>
+        <div class="about-intro">
+          <article class="about-card intro-card">
+            <div class="intro-copy">
+              <span class="metric-label">what this is</span>
+              <p>NanoGym is a local web UI and experiment library for training small character-level GPT models on a single machine.</p>
+              <p>Point it at a text file, launch a run, watch it learn in real time, then generate from the finished model here or export it to run in a web browser.</p>
+              <p>Source code, issues and updates: <a href="https://github.com/theprint/nanogym" target="_blank" rel="noopener">github.com/theprint/nanogym</a></p>
+            </div>
+            <figure class="pipeline" aria-label="How NanoGym works: data, train, watch, use">
+              <ol class="pipeline-steps">
+                <li class="pipeline-step">
+                  <span class="step-num">01</span><strong>Data</strong>
+                  <span class="step-text">Any UTF-8 text file in <code>data/</code></span>
+                  <span class="step-demo">&lt;bos&gt;Write about…&lt;eos&gt;</span>
+                </li>
+                <li class="pipeline-step">
+                  <span class="step-num">02</span><strong>Train</strong>
+                  <span class="step-text">A small GPT learns to predict the next character</span>
+                  <span class="step-demo">the ca<b>t</b></span>
+                </li>
+                <li class="pipeline-step">
+                  <button type="button" class="step-link" data-goto-tab="training" title="Open the Training tab"><span class="step-num">03</span><strong>Watch</strong>
+                  <span class="step-text">Loss curves and samples update live</span>
+                  <span class="step-demo">training · samples ↗</span></button>
+                </li>
+                <li class="pipeline-step">
+                  <button type="button" class="step-link" data-goto-tab="playground" title="Open the Playground tab"><span class="step-num">04</span><strong>Use</strong>
+                  <span class="step-text">Generate in the playground, or export for the browser</span>
+                  <span class="step-demo">playground ↗</span></button>
+                </li>
+              </ol>
+              <figcaption class="run-folder">
+                <span class="run-folder-path" title="Everything about a run lives in one folder, so runs are easy to compare, resume, clone or share.">runs/&lt;name&gt;/</span>
+                <span class="run-file" title="The frozen settings the run was started with">config.yaml</span>
+                <span class="run-file" title="The run's character set, fixed at the start of training">vocab.json</span>
+                <span class="run-file" title="Loss and throughput, one line per logged step">metrics.jsonl</span>
+                <span class="run-file" title="The text samples shown on the Samples tab">samples.jsonl</span>
+                <span class="run-file" title="Checkpoints: best validation loss, and most recent">ckpt_best.pt · ckpt_latest.pt</span>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+        <div class="about-wide">
+          <article class="about-card">
+            <span class="metric-label">model architecture</span>
+            <ul class="about-list">
+              <li><strong>GPT-style decoder.</strong> Token and learned position embeddings feed a stack of pre-LayerNorm transformer blocks. Each block is causal self-attention followed by a GELU MLP (4× expansion), both with residual connections. The output head shares its weights with the token embedding.</li>
+              <li><strong>Character-level.</strong> The vocabulary is every character in the dataset plus four special tokens (<code>&lt;pad&gt;</code>, <code>&lt;unk&gt;</code>, <code>&lt;bos&gt;</code>, <code>&lt;eos&gt;</code>), typically around 100–120 symbols, frozen per run in <code>vocab.json</code>. With so few symbols, embeddings are only 1–5% of the parameters. Nearly everything sits in the transformer blocks, which learn how characters combine rather than memorizing word identities.</li>
+              <li><strong>Attention-focused.</strong> The design leans on attention to help a tiny model keep context. At character level, a single word spans about five tokens and a sentence about a hundred, so staying coherent means connecting characters that sit far apart. Attention is the only part of the model that moves information between positions. Every preset uses 32-dimensional heads, half the head width of GPT-2, so each layer gets twice as many heads, and each head can track a different kind of look-back (the current word, the start of the sentence, an open quote). The MLPs still hold about twice as many parameters as attention, as in any GPT; the emphasis is on the number of heads.</li>
+              <li><strong>Inspectable.</strong> Training uses PyTorch's fused attention for speed. A separate manual path returns the attention weights, which powers the playground's attention heatmap.</li>
+              <li><strong>Training.</strong> AdamW (β 0.9/0.95, weight decay on weight matrices only), linear warmup into cosine learning-rate decay, gradient clipping, and mixed precision on CUDA.</li>
+            </ul>
+          </article>
+          <article class="about-card">
+            <span class="metric-label">size presets</span>
+            <div class="table-wrap"><table class="preset-table">
+              <thead><tr><th>preset</th><th>layers</th><th>width</th><th>heads</th><th>params</th></tr></thead>
+              <tbody>
+                <tr><td>tiny</td><td>4</td><td>128</td><td>4 × 32</td><td>0.8M</td></tr>
+                <tr><td>small</td><td>6</td><td>256</td><td>8 × 32</td><td>4.8M</td></tr>
+                <tr><td>medium</td><td>8</td><td>384</td><td>12 × 32</td><td>14.3M</td></tr>
+              </tbody>
+            </table></div>
+            <p><strong>tiny</strong> trains in minutes, even on a CPU, and is small enough to export and run in a web browser. The ras.ms/prompts generator (<code>prompter-v0.4-Nano</code>) is a tiny model.</p>
+            <p><strong>small</strong> is the default workhorse. It trains quickly on a GPU and picks up spelling and grammar well from a few hundred KB of text.</p>
+            <p><strong>medium</strong> gives the best quality when you have a few MB of text; on smaller datasets it tends to overfit, so watch the train/val gap. <code>occultisms-v2.4</code> is a medium model.</p>
+            <p class="about-note">Parameter counts assume a ~100-character vocabulary and a 256-character context. Context length is set per run, and any preset's layers, width or heads can be overridden in the run's YAML config.</p>
+          </article>
+        </div>
+        <div class="about-grid about-closing">
+          <article class="about-card">
+            <span class="metric-label">credit &amp; license</span>
+            <p>The model and training approach follow Andrej Karpathy's <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a>. NanoGym adapts its model code (under nanoGPT's MIT license) and builds its own training dashboard and tooling around it. It is not affiliated with or endorsed by the original project.</p>
+            <p>NanoGym is open source under the <a href="https://github.com/theprint/nanogym/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.</p>
+          </article>
+          <article class="about-card">
+            <span class="metric-label">see it live</span>
+            <p>The <a href="https://ras.ms/prompts" target="_blank" rel="noopener">writing prompt generator</a> at ras.ms/prompts runs a tiny model trained with NanoGym. It runs entirely in your browser: the model is small enough that it doesn't need a server.</p>
+            <p>You can do the same with your own models: <button type="button" class="link-button" data-goto-tab="playground">Playground</button> → <em>export for browser</em> saves any run as a standalone web page.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer><span><a href="https://github.com/theprint/nanogym" target="_blank" rel="noopener">NanoGym</a> · local-only experiment console · built on ideas from <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a></span><span>MIT licensed · offline by default · no external trackers</span></footer>
+  </div>
+  <script src="/static/chart.umd.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

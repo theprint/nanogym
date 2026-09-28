@@ -1,0 +1,16 @@
+{
+  "state": "finished",
+  "step": 50000,
+  "max_steps": 50000,
+  "tokens_seen": 640000000,
+  "dataset": "writing_prompts.txt",
+  "preset": "tiny",
+  "device": "cuda",
+  "started_at": 1784831051.2824254,
+  "updated_at": 1784832227.1630144,
+  "best_val_loss": 0.21412147402763368,
+  "parameters": 832000,
+  "val_loss": 0.21513788938522338,
+  "train_loss": 0.21373915255069734,
+  "finished_at": 1784832227.151617
+}

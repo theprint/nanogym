@@ -1,0 +1,39 @@
+model_name: occultisms-v2.4
+data:
+  path: data/occultisms_29k.txt
+  val_fraction: 0.1
+  vocab:
+    extend_from_data: true
+model:
+  preset: medium
+  block_size: 256
+  n_layer: null
+  n_embd: null
+  n_head: null
+  dropout: 0.12
+  bias: true
+train:
+  batch_size: 32
+  max_steps: 60000
+  lr: 0.000421
+  min_lr: 4.21e-05
+  lr_schedule: cosine
+  warmup_steps: 200
+  grad_clip: 1.0
+  eval_interval: 250
+  eval_iters: 25
+  log_interval: 10
+  sample_interval: 500
+  checkpoint_interval: 250
+  seed: 42
+  device: cuda
+  dtype: auto
+  num_workers: 0
+log:
+  attention_stats: false
+  prompts:
+  - ''
+  - <bos>
+  sample_tokens: 200
+  temperature: 0.8
+runs_dir: runs

@@ -1,0 +1,36 @@
+model_name: prompter-v0.4-Nano
+runs_dir: runs
+data:
+  path: data/writing_prompts.txt
+  val_fraction: 0.15
+  vocab:
+    extend_from_data: true
+model:
+  preset: tiny
+  block_size: 200
+  dropout: 0.15
+  bias: true
+train:
+  batch_size: 64
+  max_steps: 50000
+  lr: 0.000201
+  min_lr: 2.01e-05
+  lr_schedule: cosine
+  warmup_steps: 200
+  grad_clip: 1.0
+  eval_interval: 250
+  eval_iters: 25
+  log_interval: 10
+  sample_interval: 500
+  checkpoint_interval: 250
+  seed: 230726
+  device: cuda
+  dtype: auto
+  num_workers: 0
+log:
+  attention_stats: false
+  prompts:
+  - ''
+  - <bos>
+  sample_tokens: 200
+  temperature: 0.8
